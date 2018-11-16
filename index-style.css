@@ -1,0 +1,11 @@
+:root {
+    --light: #ff7961;
+    --medium: #f44336;
+    --dark: #ba000d;
+    --background: whitesmoke;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background);
+}
