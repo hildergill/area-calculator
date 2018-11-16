@@ -4,5 +4,5 @@ function calculateCircleArea() {
 
     var answerBox = document.getElementById('answer_box');
     answerBox.classList.add('answer_box');
-    answerBox.innerHTML = '<p>' + area + '</p>';
+    answerBox.innerHTML = '<p>&pi; * ('+ radius + ')<sup>2</sup> = ' + area + ' unit<sup>2</sup></p>';
 }
