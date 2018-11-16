@@ -1,6 +1,4 @@
 function loadCircle() {
-    console.log('!');
-
     var circleButton = document.getElementById('circle_button');
     var squareButton = document.getElementById('square_button');
     var rectangleButton = document.getElementById('rectangle_button');
@@ -10,4 +8,16 @@ function loadCircle() {
     circleButton.classList.add('active');
 
     document.getElementById('calculator_viewer').src = './calculators/circle/circle-area-calculator.html';
+}
+
+function loadSquare() {
+    var circleButton = document.getElementById('circle_button');
+    var squareButton = document.getElementById('square_button');
+    var rectangleButton = document.getElementById('rectangle_button');
+
+    squareButton.classList.add('active');
+    rectangleButton.classList.remove('active');
+    circleButton.classList.remove('active');
+
+    document.getElementById('calculator_viewer').src = './calculators/square/square-area-calculator.html';
 }
