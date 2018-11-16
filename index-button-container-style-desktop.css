@@ -25,4 +25,9 @@
     #button_container button:hover {
         background-color: var(--light);
     }
+
+    #button_container button.active {
+        color: var(--medium);
+        background-color: white;
+    }
 }
