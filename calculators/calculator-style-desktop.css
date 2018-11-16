@@ -3,19 +3,19 @@
 @media only screen and (min-width: 480px) {
     #introduction_divider, #calculator_panel {
         font-family: 'Lato', sans-serif;
-        border: 1px solid lightgray;
+        /* border: 1px solid lightgray; */
         border-radius: 1em;
-        background-color: whitesmoke;
+        /* background-color: whitesmoke; */
         padding: 1em;
         margin: 1em;
         text-align: center;
     }
 
-    #answer_box {
+    .answer_box {
         font-family: 'Lato', sans-serif;
-        border: 1px solid mediumaquamarine;
+        border: 1px solid lightgreen;
         border-radius: 1em;
-        background-color: lightgreen;
+        /* background-color: lightgreen; */
         padding: 1em;
         margin: 1em;
         text-align: center;
