@@ -21,3 +21,15 @@ function loadSquare() {
 
     document.getElementById('calculator_viewer').src = './calculators/square/square-area-calculator.html';
 }
+
+function loadRectangle() {
+    var circleButton = document.getElementById('circle_button');
+    var squareButton = document.getElementById('square_button');
+    var rectangleButton = document.getElementById('rectangle_button');
+
+    squareButton.classList.remove('active');
+    rectangleButton.classList.add('active');
+    circleButton.classList.remove('active');
+
+    document.getElementById('calculator_viewer').src = './calculators/rectangle/rectangle-area-calculator.html';
+}
