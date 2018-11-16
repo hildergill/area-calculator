@@ -3,20 +3,22 @@
     <head>
         <link href="../calculator-style-desktop.css" rel="stylesheet" type="text/css">
         <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
-        <script src="square-area-calculator.js"></script>
+        <script src="rectangle-area-calculator.js"></script>
     </head>
 
     <body>
         <div id="introduction_divider">
-            <h2>Square</h2>
-            <p>Formula: \(A = x^2\)</p> 
+            <h2>Rectangle</h2>
+            <p>Formula: \(A = x \times y\)</p> 
         </div>
 
         <div id="calculator_panel">
             <form>
                 Length (x): <input type="number" id="length_input"/> unit
                 <br><br>
-                <input type="button" value="Calculate" onclick="calculateSquareArea()" class="click_button"/>
+                Width (y): <input type="number" id="width_input"/> unit
+                <br><br>
+                <input type="button" value="Calculate" onclick="calculateRectangleArea()" class="click_button"/>
             </form>
         </div>
 
