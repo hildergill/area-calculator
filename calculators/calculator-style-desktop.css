@@ -17,4 +17,18 @@
         margin: 1em;
         text-align: center;
     }
+
+    .click_button {
+        border: 1px solid lightgray;
+        border-radius: 0.5em;
+        background: none;
+        padding: 1em;
+
+        transition-duration: 0.1s;
+    }
+
+    .click_button:hover {
+        background-color: lightgray;
+        color: white;
+    }
 }
