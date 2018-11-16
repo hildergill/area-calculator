@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 285px) {
     #introduction_divider, #calculator_panel {
         font-family: 'Lato', sans-serif;
         border-radius: 1em;
