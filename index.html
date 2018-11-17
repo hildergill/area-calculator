@@ -14,14 +14,17 @@
         <link href="./index-button-container-style-desktop.css" rel="stylesheet" type="text/css">
         <link href="./index-content-divider-style-desktop.css" rel="stylesheet" type="text/css">
         <link href="./index-calculator-divider-style-desktop.css" rel="stylesheet" type="text/css">
+
+        <!-- External scripts -->
+        <script src="./index-script.js"></script>
     </head>
 
-    <body>
+    <body onload="loadSquare()">
         <div id="content_divider">
             <div id="button_container">
-                <button>Square</button>
-                <button>Rectangle</button>
-                <button>Circle</button>
+                <button id="square_button" onclick="loadSquare()">Square</button>
+                <button id="rectangle_button" onclick="loadRectangle()">Rectangle</button>
+                <button id="circle_button" onclick="loadCircle()">Circle</button>
             </div>
 
             <div id="calculator_divider">
