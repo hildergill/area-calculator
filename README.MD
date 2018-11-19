@@ -2,7 +2,7 @@
 
 By [Hilder Gill](https://github.com/hildergill)
 
-[Website link](hildergill.github.io/area-calculator)
+[Website link](https://hildergill.github.io/area-calculator/)
 
 
 
