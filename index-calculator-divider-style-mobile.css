@@ -1,0 +1,16 @@
+@media only screen and (max-width: 479px) {
+    #calculator_divider {
+        flex-grow: 9;
+        margin: 1em;
+        padding: 1em;
+        background-color: white;
+        border-radius: 1em;
+        box-shadow: 0px 2px 2px lightgray;
+        display: flex;
+    }
+
+    #calculator_viewer {
+        flex-grow: 1;
+        border: none;
+    }
+}
