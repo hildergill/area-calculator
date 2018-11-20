@@ -6,11 +6,11 @@
         background-color: white;
         border-radius: 1em;
         box-shadow: 0px 2px 2px lightgray;
+        display: flex;
     }
 
     #calculator_viewer {
-        height: 100%;
-        width: 100%;
+        flex-grow: 1;
         border: none;
     }
 }

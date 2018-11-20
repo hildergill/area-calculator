@@ -3,20 +3,23 @@
 @media only screen and (max-width: 479px) {
     #button_container {
         background-color: var(--medium);
-        flex-grow: 1;
+        /* flex-grow: 0; */
         box-shadow: 2px 0px 2px lightgray;
+        padding: 0;
+        overflow: auto;
     }
 
     #button_container button {
         background: none;
-        display: inline;
+        display: inline-block;
         border: none;
         color: white;
-
         padding: 1em;
-        text-align: left;
+        height: auto;
+        text-align: center;
         font-family: 'Karla', sans-serif;
         font-size: 1.25em;
+        margin: 0;
 
         transition-duration: 0.1s;
     }
