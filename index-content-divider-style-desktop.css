@@ -1,10 +1,12 @@
-#content_divider {
-    display: flex;
-    flex-direction: row;
-    
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
+@media only screen and (min-width: 480px) {
+    #content_divider {
+        display: flex;
+        flex-direction: row;
+        
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
 }

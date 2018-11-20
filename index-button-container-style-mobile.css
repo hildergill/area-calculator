@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
+@media only screen and (max-width: 479px) {
+    #button_container {
+        background-color: var(--medium);
+        flex-grow: 1;
+        box-shadow: 2px 0px 2px lightgray;
+    }
+
+    #button_container button {
+        background: none;
+        display: inline;
+        border: none;
+        color: white;
+
+        padding: 1em;
+        text-align: left;
+        font-family: 'Karla', sans-serif;
+        font-size: 1.25em;
+
+        transition-duration: 0.1s;
+    }
+
+    #button_container button:hover {
+        background-color: var(--light);
+    }
+
+    #button_container button.active {
+        color: var(--medium);
+        background-color: white;
+    }
+}
