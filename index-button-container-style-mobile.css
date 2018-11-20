@@ -10,7 +10,7 @@
 
     #button_container button {
         background: none;
-        display: inline-block;
+        display: block;
         border: none;
         color: white;
         padding: 1em;
@@ -19,6 +19,7 @@
         font-family: 'Karla', sans-serif;
         font-size: 1.25em;
         margin: 0;
+        float: left;
 
         transition-duration: 0.1s;
     }
