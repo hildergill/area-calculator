@@ -3,6 +3,7 @@
 @media only screen and (min-width: 480px) {
     #button_container {
         background-color: var(--medium);
+        background: rgb(244,67,54);
         flex-grow: 1;
         box-shadow: 2px 0px 2px lightgray;
     }
@@ -24,10 +25,13 @@
 
     #button_container button:hover {
         background-color: var(--light);
+        background: rgb(255,121,97)
     }
 
     #button_container button.active {
         color: var(--medium);
+        color: rgb(244,67,54);
         background-color: white;
+        background: rgb(255,255,255);
     }
 }
