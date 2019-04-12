@@ -4,12 +4,13 @@
     #button_container {
         background-color: var(--medium);
         padding: 0;
-        overflow: auto;
+        overflow: scroll;
+        white-space: nowrap;
     }
 
     #button_container button {
         background: none;
-        display: block;
+        display: inline-block;
         border: none;
         color: white;
         padding: 1em;
@@ -18,7 +19,7 @@
         font-family: 'Karla', sans-serif;
         font-size: 1.25em;
         margin: 0;
-        float: left;
+        /*float: left;*/
 
         transition-duration: 0.1s;
     }
