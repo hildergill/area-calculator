@@ -1,6 +1,13 @@
+:root {
+	--color-light: #ef4e6e;
+	--color-medium: #dc143c;
+	--color-dark: #960e29;
+}
+
 * {
 	padding: 0;
 	margin: 0;
+	font-family: 'Roboto Mono', monospace;
 }
 
 body {
