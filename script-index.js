@@ -1,4 +1,5 @@
 var shapeArray = [new Circle(), new Triangle()];
+var shapeIndex = 0;
 
 function loadShapes() {
 	var buttonSection = document.getElementById('buttons_section');
@@ -8,6 +9,7 @@ function loadShapes() {
 }
 
 function loadInput(shapeIndex) {
+	this.shapeIndex = shapeIndex;
 	var inputBox = document.getElementById('input_box');
 	var buttons = document.getElementById('buttons_section').getElementsByTagName('button');
 
