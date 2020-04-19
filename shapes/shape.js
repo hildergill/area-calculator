@@ -12,8 +12,8 @@ class Shape {
 		elements.map((value) => {
 			retArray.push(value + '\n');
 		});
-		retArray.push('</div>');
 		retArray.push('<div>', '<button>Clear</button>', '<button>Calculate</button>', '</div>');
+		retArray.push('</div>');
 
 		var returnValue = '';
 		retArray.map((value) => {
