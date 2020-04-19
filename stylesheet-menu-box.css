@@ -18,7 +18,8 @@
 	font-size: 8pt;
 }
 
-#repo_page_section {
+#repo_page_section,
+#buttons_section {
 	padding: 1rem;
 }
 
@@ -31,15 +32,29 @@
 	text-align: left;
 	font-size: 12pt;
 	color: var(--color-light);
-	border-radius: 4px;
 	transition-duration: 100ms;
 }
 
-#repo_page_section button:hover {
+#buttons_section button {
+	border: 1px solid var(--color-light);
+	background: 0;
+	cursor: pointer;
+	width: 100%;
+	padding: 1rem;
+	text-align: left;
+	font-size: 12pt;
+	color: var(--color-light);
+	transition-duration: 100ms;
+	margin-bottom: 0.5rem;
+}
+
+#repo_page_section button:hover,
+#buttons_section button:hover {
 	color: white;
 	background-color: var(--color-light);
 }
 
-#repo_page_section button:active {
+#repo_page_section button:active,
+#buttons_section button:active {
 	background-color: var(--color-medium);
 }
