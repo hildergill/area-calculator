@@ -14,9 +14,10 @@ function loadInput(shapeIndex) {
 	inputBox.innerHTML = shapeArray[shapeIndex].generateInput();
 
 	for (var i = 0; i < buttons.length; i++) {
-		if (i === shapeIndex) {
-			console.log('Index: ' + shapeIndex);
-			buttons[shapeIndex].classList.add('active');
-		} else buttons[shapeIndex].classList = null;
+		buttons[i].classList.remove('active');
 	}
+
+	buttons[shapeIndex].classList.add('active');
+	console.log(shapeIndex);
+	console.log(buttons);
 }
