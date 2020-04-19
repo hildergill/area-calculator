@@ -41,6 +41,7 @@
 	color: var(--color-light);
 	background: none;
 	cursor: pointer;
+	transition-duration: 100ms;
 }
 
 #input_section button:hover {
@@ -50,4 +51,5 @@
 
 #input_section button:active {
 	background-color: var(--color-medium);
+	color: white;
 }
