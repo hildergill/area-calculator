@@ -1,4 +1,4 @@
-var calculatorArray = [new Circle()];
+var calculatorArray = [new Circle(), new Triangle()];
 
 function loadShapes() {
 	var buttonSection = document.getElementById('buttons_section');

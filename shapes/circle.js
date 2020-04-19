@@ -8,6 +8,9 @@ class Circle extends Shape {
 	}
 
 	generateInput() {
-		return super.generateInput(this.getName(), ['<input type="number" step="0.01" id="radius_input">']);
+		return super.generateInput(this.getName(), [
+			'<p>Radius</p>',
+			'<input type="number" step="0.01" id="radius_input">',
+		]);
 	}
 }
