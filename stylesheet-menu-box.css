@@ -55,6 +55,8 @@
 }
 
 #repo_page_section button:active,
-#buttons_section button:active {
+#buttons_section button:active,
+#buttons_section button.active {
 	background-color: var(--color-medium);
+	color: white;
 }
