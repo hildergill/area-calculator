@@ -17,3 +17,29 @@
 #menu_box #title_section p:nth-child(2) {
 	font-size: 8pt;
 }
+
+#repo_page_section {
+	padding: 1rem;
+}
+
+#repo_page_section button {
+	border: 1px solid var(--color-light);
+	background: 0;
+	cursor: pointer;
+	width: 100%;
+	padding: 1rem;
+	text-align: left;
+	font-size: 12pt;
+	color: var(--color-light);
+	border-radius: 4px;
+	transition-duration: 100ms;
+}
+
+#repo_page_section button:hover {
+	color: white;
+	background-color: var(--color-light);
+}
+
+#repo_page_section button:active {
+	background-color: var(--color-medium);
+}
