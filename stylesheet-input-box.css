@@ -1,0 +1,36 @@
+#input_section {
+	margin: 1rem;
+	padding: 1rem;
+	border: 1px solid var(--color-light);
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: max-content auto max-content;
+	gap: 1rem;
+}
+
+#input_section p {
+	color: var(--color-light);
+}
+
+#input_title {
+	font-size: 18pt;
+}
+
+#input_section input[type='number'] {
+	border: none;
+	border-bottom: 1px solid var(--color-light);
+	padding: 2px;
+	color: var(--color-light);
+	-moz-appearance: textfield;
+	text-align: right;
+}
+
+#input_section input[type='number']::-webkit-inner-spin-button,
+#input_section input[type='number']::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+#input_section input[type='number']:focus {
+	outline: none;
+}

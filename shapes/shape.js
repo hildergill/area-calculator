@@ -8,7 +8,7 @@ class Shape {
 	}
 
 	generateInput(title, elements) {
-		var retArray = ['<div id="input_section">', '<p>', title, '</p>'];
+		var retArray = ['<div id="input_section">', '<p id="input_title">', title, '</p>'];
 		elements.map((value) => {
 			retArray.push(value + '\n');
 		});
