@@ -23,3 +23,7 @@ function loadInput(shapeIndex) {
 	console.log(shapeIndex);
 	console.log(buttons);
 }
+
+function clearInputs() {
+	shapeArray[shapeIndex].clearInputs();
+}

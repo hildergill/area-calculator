@@ -31,4 +31,9 @@ class Triangle extends Shape {
 			'</div>',
 		]);
 	}
+
+	clearInputs() {
+		document.getElementById('width_input').value = null;
+		document.getElementById('height_input').value = null;
+	}
 }

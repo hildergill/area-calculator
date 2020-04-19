@@ -28,4 +28,8 @@ class Circle extends Shape {
 			'</div>',
 		]);
 	}
+
+	clearInputs() {
+		document.getElementById('radius_input').value = null;
+	}
 }
