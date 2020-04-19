@@ -3,3 +3,17 @@
 	grid-template-columns: auto;
 	grid-template-rows: max-content auto max-content;
 }
+
+#menu_box #title_section {
+	padding: 1rem;
+	color: var(--color-light);
+	text-align: left;
+}
+
+#menu_box #title_section p:nth-child(1) {
+	font-size: 18pt;
+}
+
+#menu_box #title_section p:nth-child(2) {
+	font-size: 8pt;
+}
