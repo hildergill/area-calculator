@@ -1,0 +1,5 @@
+#menu_box {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: max-content auto max-content;
+}
