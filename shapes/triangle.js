@@ -8,11 +8,25 @@ class Triangle extends Shape {
 	}
 
 	generateInput() {
+		var styleArray = [
+			'display: grid;',
+			'grid-template-columns: max-content auto;',
+			'grid-template-rows: auto auto;',
+			'gap: 0.5rem;',
+		];
+
+		var styleString = '';
+		styleArray.map((value) => {
+			styleString += value + '\n';
+		});
+
 		return super.generateInput(this.getName(), [
+			'<div style="' + styleString + '">',
 			'<p>Width: </p>',
 			'<input type="number" step="0.01" id="width_input">',
 			'<p>Height: </p>',
 			'<input type="number" step="0.01" id="height_input">',
+			'</div>',
 		]);
 	}
 }
