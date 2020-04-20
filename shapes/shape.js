@@ -22,4 +22,23 @@ class Shape {
 
 		return returnValue;
 	}
+
+	clearInputs() {
+		// OVERWRITE THIS METHOD
+	}
+
+	generateResultBox(name, calculations, results) {
+		var resultBoxElement = ['<div class="result_box">', '<p id="result_title">', name, '</p>'];
+		calculations.map((value) => {
+			resultBoxElement.push(value);
+		});
+		resultBoxElement.push('<p>' + results + '</p>', '</div>');
+
+		var returnValue = '';
+		resultBoxElement.map((value) => {
+			returnValue += value + '\n';
+		});
+
+		return returnValue;
+	}
 }
