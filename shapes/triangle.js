@@ -36,4 +36,32 @@ class Triangle extends Shape {
 		document.getElementById('width_input').value = null;
 		document.getElementById('height_input').value = null;
 	}
+
+	generateResultBox(results) {
+		var calculationsArray = [
+			'<span style="display: inline;">',
+			'<span style="display: grid;grid-template-rows: max-content auto max-content;grid-template-columns: min-content;">',
+			'<p>1</p>',
+			'<hr>',
+			'<p>2</p>',
+			'</span>',
+			'<p style="vertical-align: middle;display: inline;">&#8729;' +
+				results.width +
+				'&#8729;' +
+				results.height +
+				'</p>',
+			'</span>',
+		];
+
+		return super.generateResultBox(this.getName(), calculationsArray, this.getArea(results.radius));
+	}
+
+	getInputs() {
+		var returnValue = {
+			width: document.getElementById('width_input').value,
+			height: document.getElementById('height_input').value,
+		};
+
+		return returnValue;
+	}
 }
