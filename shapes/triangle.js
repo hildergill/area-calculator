@@ -39,13 +39,13 @@ class Triangle extends Shape {
 
 	generateResultBox(results) {
 		var calculationsArray = [
-			'<span style="display: inline;">',
+			'<span style="display: flex;">',
 			'<span style="display: grid;grid-template-rows: max-content auto max-content;grid-template-columns: min-content;">',
 			'<p>1</p>',
 			'<hr>',
 			'<p>2</p>',
 			'</span>',
-			'<p style="vertical-align: middle;display: inline;">&#8729;' +
+			'<p style="display: inline;vertical-align: middle;margin-top: auto;margin-bottom: auto;">&#8729;' +
 				results.width +
 				'&#8729;' +
 				results.height +
@@ -53,7 +53,7 @@ class Triangle extends Shape {
 			'</span>',
 		];
 
-		return super.generateResultBox(this.getName(), calculationsArray, this.getArea(results.radius));
+		return super.generateResultBox(this.getName(), calculationsArray, this.getArea(results.width, results.height));
 	}
 
 	getInputs() {
