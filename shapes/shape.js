@@ -39,7 +39,7 @@ class Shape {
 		calculations.map((value) => {
 			resultBoxElement.push(value);
 		});
-		resultBoxElement.push('<p>= ' + results + ' units<sup>2</sup></p>', '</div>');
+		resultBoxElement.push('<p>= ' + results + '</p>', '</div>');
 
 		var returnValue = '';
 		resultBoxElement.map((value) => {

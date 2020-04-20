@@ -8,6 +8,11 @@ div.result_box {
 	padding: 1rem;
 	margin-bottom: 1rem;
 	color: white;
+
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: repeat(3, max-content);
+	gap: 0.5rem;
 }
 
 div.result_box hr {

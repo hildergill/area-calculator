@@ -24,7 +24,6 @@ class Circle extends Shape {
 			'<div style="' + styleString + '">',
 			'<p>Radius: </p>',
 			'<input type="number" step="0.01" id="radius_input">',
-			'<p>units</p>',
 			'</div>',
 		]);
 	}

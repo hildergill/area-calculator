@@ -28,7 +28,7 @@
 	background: 0;
 	cursor: pointer;
 	width: 100%;
-	padding: 1rem;
+	padding: 0.5rem;
 	text-align: left;
 	font-size: 12pt;
 	color: var(--color-light);
@@ -40,12 +40,12 @@
 	background: 0;
 	cursor: pointer;
 	width: 100%;
-	padding: 1rem;
+	padding: 0.5rem;
 	text-align: left;
 	font-size: 12pt;
 	color: var(--color-light);
 	transition-duration: 100ms;
-	margin-bottom: 1rem;
+	margin-bottom: 0.5rem;
 }
 
 #repo_page_section button:hover,
