@@ -19,3 +19,7 @@ div.result_box hr {
 	border-color: white;
 	color: white;
 }
+
+div.result_box #result_title {
+	font-size: 18pt;
+}
