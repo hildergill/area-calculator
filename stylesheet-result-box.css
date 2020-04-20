@@ -1,5 +1,6 @@
 #results_array_box {
 	padding: 1rem;
+	overflow-y: auto;
 }
 
 div.result_box {
