@@ -20,8 +20,6 @@ function loadInput(shapeIndex) {
 	}
 
 	buttons[shapeIndex].classList.add('active');
-	console.log(shapeIndex);
-	console.log(buttons);
 }
 
 function clearInputs() {
@@ -30,5 +28,8 @@ function clearInputs() {
 
 function calculate() {
 	var resultBoxArray = document.getElementById('results_array_box');
-	resultBoxArray.innerHTML += shapeArray[shapeIndex].generateResultBox(shapeArray[shapeIndex].getInputs());
+	var elementToAppend = shapeArray[shapeIndex].generateResultBox(shapeArray[shapeIndex].getInputs());
+	resultBoxArray.innerHTML += elementToAppend;
+
+	console.log(elementToAppend);
 }

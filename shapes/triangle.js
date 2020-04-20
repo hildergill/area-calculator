@@ -24,10 +24,10 @@ class Triangle extends Shape {
 			'<div style="' + styleString + '">',
 			'<p>Width: </p>',
 			'<input type="number" step="0.01" id="width_input">',
-			'<p>unit</p>',
+			'<p>units</p>',
 			'<p>Height: </p>',
 			'<input type="number" step="0.01" id="height_input">',
-			'<p>unit</p>',
+			'<p>units</p>',
 			'</div>',
 		]);
 	}

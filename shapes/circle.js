@@ -24,7 +24,7 @@ class Circle extends Shape {
 			'<div style="' + styleString + '">',
 			'<p>Radius: </p>',
 			'<input type="number" step="0.01" id="radius_input">',
-			'<p>unit</p>',
+			'<p>units</p>',
 			'</div>',
 		]);
 	}
@@ -34,8 +34,7 @@ class Circle extends Shape {
 	}
 
 	generateResultBox(results) {
-		var calculationsArray = ['<p>&#960;&#8729;</p>'];
-
+		var calculationsArray = ['<p>&#960;&#8729;', results.radius, '<sup>2</sup></p>'];
 		return super.generateResultBox(this.getName(), calculationsArray, this.getArea(results.radius));
 	}
 
