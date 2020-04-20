@@ -5,7 +5,7 @@
 }
 
 #menu_box #title_section {
-	padding: 1rem;
+	padding: 0.5rem;
 	color: var(--color-light);
 	text-align: left;
 }
@@ -20,7 +20,7 @@
 
 #repo_page_section,
 #buttons_section {
-	padding: 1rem;
+	padding: 0.5rem;
 }
 
 #repo_page_section button {
@@ -28,7 +28,7 @@
 	background: 0;
 	cursor: pointer;
 	width: 100%;
-	padding: 1rem;
+	padding: 0.5rem;
 	text-align: left;
 	font-size: 12pt;
 	color: var(--color-light);
@@ -40,7 +40,7 @@
 	background: 0;
 	cursor: pointer;
 	width: 100%;
-	padding: 1rem;
+	padding: 0.5rem;
 	text-align: left;
 	font-size: 12pt;
 	color: var(--color-light);
