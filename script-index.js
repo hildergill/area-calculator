@@ -31,5 +31,5 @@ function calculate() {
 	var elementToAppend = shapeArray[shapeIndex].generateResultBox(shapeArray[shapeIndex].getInputs());
 	resultBoxArray.innerHTML += elementToAppend;
 
-	console.log(elementToAppend);
+	clearInputs();
 }
