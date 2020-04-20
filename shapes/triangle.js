@@ -40,9 +40,9 @@ class Triangle extends Shape {
 	generateResultBox(results) {
 		var calculationsArray = [
 			'<span style="display: flex;">',
-			'<span style="display: grid;grid-template-rows: max-content auto max-content;grid-template-columns: min-content;">',
+			'<span style="display: grid;grid-template-rows: max-content 1px max-content;grid-template-columns: min-content;">',
 			'<p>1</p>',
-			'<hr>',
+			'<span style="background-color: white;"></span>',
 			'<p>2</p>',
 			'</span>',
 			'<p style="display: inline;vertical-align: middle;margin-top: auto;margin-bottom: auto;">&#8729;' +
