@@ -32,4 +32,18 @@ class Circle extends Shape {
 	clearInputs() {
 		document.getElementById('radius_input').value = null;
 	}
+
+	generateResultBox(results) {
+		var calculationsArray = ['<p>&#960;&#8729;</p>'];
+
+		return super.generateResultBox(this.getName(), calculationsArray, this.getArea(results.radius));
+	}
+
+	getInputs() {
+		var returnValue = {
+			radius: document.getElementById('radius_input').value,
+		};
+
+		return returnValue;
+	}
 }

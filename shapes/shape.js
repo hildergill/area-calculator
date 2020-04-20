@@ -12,7 +12,14 @@ class Shape {
 		elements.map((value) => {
 			retArray.push(value + '\n');
 		});
-		retArray.push('<div>', '<button onclick="clearInputs();">Clear</button>', '<button>Calculate</button>', '</div>');
+
+		retArray.push(
+			'<div>',
+			'<button onclick="clearInputs();">Clear</button>',
+			'<button onclick="calculate();">Calculate</button>',
+			'</div>'
+		);
+
 		retArray.push('</div>');
 
 		var returnValue = '';
@@ -32,7 +39,7 @@ class Shape {
 		calculations.map((value) => {
 			resultBoxElement.push(value);
 		});
-		resultBoxElement.push('<p>' + results + '</p>', '</div>');
+		resultBoxElement.push('<p>' + results + ' units<sup>2</sup></p>', '</div>');
 
 		var returnValue = '';
 		resultBoxElement.map((value) => {
@@ -40,5 +47,9 @@ class Shape {
 		});
 
 		return returnValue;
+	}
+
+	getInputs() {
+		return null;
 	}
 }

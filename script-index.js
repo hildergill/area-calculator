@@ -27,3 +27,8 @@ function loadInput(shapeIndex) {
 function clearInputs() {
 	shapeArray[shapeIndex].clearInputs();
 }
+
+function calculate() {
+	var resultBoxArray = document.getElementById('results_array_box');
+	resultBoxArray.innerHTML += shapeArray[shapeIndex].generateResultBox(shapeArray[shapeIndex].getInputs());
+}
