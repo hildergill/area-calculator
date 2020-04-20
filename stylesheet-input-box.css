@@ -1,6 +1,6 @@
 #input_section {
-	margin: 0.5rem;
-	padding: 0.5rem;
+	margin: 1rem;
+	padding: 1rem;
 	border: 1px solid var(--color-light);
 	display: grid;
 	grid-template-columns: auto;
@@ -36,7 +36,7 @@
 }
 
 #input_section button {
-	padding: 0.5rem;
+	padding: 1rem;
 	border: 1px solid var(--color-light);
 	color: var(--color-light);
 	background: none;
