@@ -10,7 +10,7 @@ class Triangle extends Shape {
 	generateInput() {
 		var styleArray = [
 			'display: grid;',
-			'grid-template-columns: max-content auto max-content;',
+			'grid-template-columns: max-content auto;',
 			'grid-template-rows: auto auto;',
 			'gap: 0.5rem;',
 		];
