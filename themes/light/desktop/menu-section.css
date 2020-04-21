@@ -11,4 +11,23 @@
 		display: flex;
 		flex-direction: column;
 	}
+
+	#title_box {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: auto auto;
+		gap: 0.25rem;
+	}
+
+	#title_box p:nth-child(1) {
+		font-size: x-large;
+	}
+
+	#title_box p:nth-child(2) {
+		font-size: smaller;
+	}
+
+	#title_box a {
+		color: var(--color-foreground);
+	}
 }
