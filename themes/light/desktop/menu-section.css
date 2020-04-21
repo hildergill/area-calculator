@@ -1,1 +1,10 @@
-/* TODO: Add something here */
+#menu_section {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: max-content auto max-content;
+}
+
+#shape_button_array {
+	display: flex;
+	flex-direction: column;
+}
