@@ -12,11 +12,12 @@
 		flex-direction: column;
 	}
 
-	#title_box {
+	#title_box,
+	#about_box {
 		display: grid;
 		grid-template-columns: auto;
 		grid-template-rows: auto auto;
-		gap: 0.25rem;
+		gap: 0.5rem;
 	}
 
 	#title_box p:nth-child(1) {
