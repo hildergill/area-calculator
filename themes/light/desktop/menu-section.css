@@ -1,10 +1,14 @@
-#menu_section {
-	display: grid;
-	grid-template-columns: auto;
-	grid-template-rows: max-content auto max-content;
-}
+@media only screen and (min-width: 800px) {
+	#menu_section {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: max-content auto max-content;
+		gap: 0.5rem;
+		padding: 0.5rem;
+	}
 
-#shape_button_array {
-	display: flex;
-	flex-direction: column;
+	#shape_button_array {
+		display: flex;
+		flex-direction: column;
+	}
 }
