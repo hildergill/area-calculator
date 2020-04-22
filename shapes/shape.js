@@ -8,17 +8,20 @@ class Shape {
 	}
 
 	generateInputElements(title, inputElements, rows) {
-		var styleString = 'display: grid;' +
-			`grid-template-rows: repeat(${rows}, auto);` +
-			'grid-template-columns: max-content auto;' +
-			'gap: 0.5rem;';
+		var styleString = 'display: grid;'
+			+ `grid-template-rows: repeat(${rows}, auto);`
+			+ 'grid-template-columns: max-content auto;'
+			+ 'gap: 0.5rem;';
+
+		var buttonsContainerStyleString = 'display: flex;'
+			+ 'flex-direction: row-reverse;' ;
 
 		var elements = [, `<p id="input_title">${title}</p>`, `<div style="${styleString}">`];
 		for (var i = 0; i < inputElements.length; i++) elements.push(inputElements[i]);
 		elements.push('</div>');
-		elements.push('<div>', 
-			'<button>Clear</button>', 
-			'<button>Calculate</button>', 
+		elements.push(`<div style="${buttonsContainerStyleString}">`,
+			'<button>Clear</button>',
+			'<button>Calculate</button>',
 			'</div>');
 
 		var elementsString = '';
