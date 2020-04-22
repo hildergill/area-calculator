@@ -8,7 +8,11 @@ class Circle extends Shape {
 	}
 
 	generateInputElements() {
-		return super.generateInputElements(this.getName(), ['<p>Hello, World!</p>']);
+		var inputElements = [
+			'<p>Radius: </p>',
+			'<input type="number" id="radius_input">'
+		];
+		return super.generateInputElements(this.getName(), inputElements, 1);
 	}
 
 	// TODO: Add the other 2 functions here later

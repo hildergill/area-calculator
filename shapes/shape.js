@@ -7,15 +7,15 @@ class Shape {
 		return null;
 	}
 
-	generateInputElements(title, inputElements) {
-		var styleString =
-			'display: grid;' +
-			`grid-template-rows: repeat(${inputElements.length}, auto);` +
-			'grid-template-columns: max-content auto;';
+	generateInputElements(title, inputElements, rows) {
+		var styleString = 'display: grid;' +
+			`grid-template-rows: repeat(${rows}, auto);` +
+			'grid-template-columns: max-content auto;' +
+			'gap: 0.5rem;';
 
-		var elements = [`<div style="${styleString}">`, `<p id="input_title">${title}</p>`];
+		var elements = [`<div>`, `<p id="input_title">${title}</p>`, `<div style="${styleString}">`];
 		for (var i = 0; i < inputElements.length; i++) elements.push(inputElements[i]);
-		elements.push('</div>');
+		elements.push('</div></div>');
 
 		var elementsString = '';
 		elements.forEach((value) => {
