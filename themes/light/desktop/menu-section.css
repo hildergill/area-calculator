@@ -20,6 +20,7 @@
 		padding: 0.5rem;
 		font-size: 12pt;
 		cursor: pointer;
+		margin: 0.25rem;
 	}
 
 	#shape_button_array button:active,

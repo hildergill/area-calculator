@@ -7,24 +7,24 @@
 
 		<link rel="stylesheet" href="./themes/light/desktop/index.css" />
 		<link rel="stylesheet" href="./themes/light/desktop/menu-section.css" />
+		<link rel="stylesheet" href="./themes/light/desktop/input-section.css" />
 
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet" />
+
+		<script src="./shapes/shape.js"></script>
+		<script src="./shapes/circle.js"></script>
+		<script src="./shapes/triangle.js"></script>
+		<script src="./index.js"></script>
 	</head>
 
-	<body>
+	<body onload="loadShapeArraySelector();loadShapeInputs(0);">
 		<div id="menu_section">
 			<div id="title_box" class="common_box">
 				<p>Area Calculator</p>
 				<p>By <a href="#">Hilder Gill</a></p>
 			</div>
 
-			<div id="shape_button_array" class="common_box">
-				<button>Lorem</button>
-				<button>Lorem</button>
-				<button>Lorem</button>
-				<button>Lorem</button>
-				<button>Lorem</button>
-			</div>
+			<div id="shape_button_array" class="common_box"></div>
 
 			<div id="about_box" class="common_box">
 				<button class="common_button">View repo on Github</button>
@@ -32,7 +32,10 @@
 			</div>
 		</div>
 
-		<div></div>
+		<div id="input_section">
+			<div id="input_box"></div>
+		</div>
+
 		<div></div>
 	</body>
 </html>
