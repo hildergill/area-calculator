@@ -10,7 +10,7 @@ class Circle extends Shape {
 	generateInputElements() {
 		var inputElements = [
 			'<p>Radius: </p>',
-			'<input type="number" id="radius_input">'
+			'<input type="number" id="radius_input" step="0.001">'
 		];
 		return super.generateInputElements(this.getName(), inputElements, 1);
 	}
