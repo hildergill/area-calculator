@@ -8,7 +8,8 @@ function loadShapeArraySelector() {
 	});
 }
 
-function loadInput(index) {
+function loadShapeInputs(index) {
+	this.shapeIndex = index;
 	var inputSection = document.getElementById('input_box');
 	var buttons = document.getElementById('shape_button_array').getElementsByTagName('button');
 
@@ -18,4 +19,8 @@ function loadInput(index) {
 		if (i === index) buttons[i].classList.add('active');
 		else buttons[i].classList.remove('active');
 	}
+}
+
+function calculate() {
+	console.log(shapeArray[shapeIndex].getInputs());
 }

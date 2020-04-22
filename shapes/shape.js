@@ -14,14 +14,15 @@ class Shape {
 			+ 'gap: 0.5rem;';
 
 		var buttonsContainerStyleString = 'display: flex;'
-			+ 'flex-direction: row-reverse;' ;
+			+ 'flex-direction: row-reverse;';
 
-		var elements = [, `<p id="input_title">${title}</p>`, `<div style="${styleString}">`];
+		var elements = [`<p id="input_title">${title}</p>`, `<div style="${styleString}">`];
 		for (var i = 0; i < inputElements.length; i++) elements.push(inputElements[i]);
 		elements.push('</div>');
+
 		elements.push(`<div style="${buttonsContainerStyleString}">`,
+			'<button onclick="calculate();">Calculate</button>',
 			'<button>Clear</button>',
-			'<button>Calculate</button>',
 			'</div>');
 
 		var elementsString = '';
@@ -34,6 +35,10 @@ class Shape {
 
 	generateResultElements() {
 		// TODO: Add something here
+		return null;
+	}
+
+	getInputs() {
 		return null;
 	}
 }
