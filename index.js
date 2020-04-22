@@ -1,10 +1,10 @@
-var shapeArray = [new Circle()];
+var shapeArray = [new Circle(), new Triangle()];
 var shapeIndex = 0;
 
 function loadShapeArraySelector() {
 	var shapeButtonArray = document.getElementById('shape_button_array');
-	shapeArray.forEach((value) => {
-		shapeButtonArray.innerHTML += `<button>${value.getName()}</button>`;
+	shapeArray.forEach((value, index) => {
+		shapeButtonArray.innerHTML += `<button onclick="loadShapeInputs(${index});">${value.getName()}</button>`;
 	});
 }
 
