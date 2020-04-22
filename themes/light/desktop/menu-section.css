@@ -1,0 +1,50 @@
+@media only screen and (min-width: 1000px) {
+	#menu_section {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: max-content auto max-content;
+		gap: 0.5rem;
+		padding: 0.5rem;
+	}
+
+	#shape_button_array {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#shape_button_array button {
+		border: 0;
+		background-color: var(--color-light);
+		color: var(--color-foreground);
+		text-align: left;
+		padding: 0.5rem;
+		font-size: 12pt;
+		cursor: pointer;
+	}
+
+	#shape_button_array button:active,
+	#shape_button_array button.active {
+		background-color: var(--color-foreground);
+		color: var(--color-light);
+	}
+
+	#title_box,
+	#about_box {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: auto auto;
+		gap: 0.5rem;
+	}
+
+	#title_box p:nth-child(1) {
+		font-size: x-large;
+	}
+
+	#title_box p:nth-child(2) {
+		font-size: smaller;
+	}
+
+	#title_box a {
+		color: var(--color-foreground);
+	}
+}
