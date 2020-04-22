@@ -24,3 +24,8 @@ function loadShapeInputs(index) {
 function calculate() {
 	console.log(shapeArray[shapeIndex].getInputs());
 }
+
+function clearInputs() {
+	console.log('!');
+	shapeArray[shapeIndex].clearInputs();
+}

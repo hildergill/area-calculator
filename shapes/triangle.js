@@ -27,5 +27,10 @@ class Triangle extends Shape {
         return returnValue;
     }
 
+    clearInputs() {
+        document.getElementById('width_input').value = null;
+        document.getElementById('height_input').value = null;
+    }
+
     // TODO: Add the other 2 functions here later
 }

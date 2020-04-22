@@ -22,7 +22,7 @@ class Shape {
 
 		elements.push(`<div style="${buttonsContainerStyleString}">`,
 			'<button onclick="calculate();">Calculate</button>',
-			'<button>Clear</button>',
+			'<button onclick="clearInputs();">Clear</button>',
 			'</div>');
 
 		var elementsString = '';
@@ -40,5 +40,9 @@ class Shape {
 
 	getInputs() {
 		return null;
+	}
+
+	clearInputs() {
+		// Extend this method
 	}
 }

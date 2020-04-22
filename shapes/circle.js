@@ -24,5 +24,9 @@ class Circle extends Shape {
 		return returnValue;
 	}
 
+	clearInputs() {
+		document.getElementById('radius_input').value = null;
+	}
+
 	// TODO: Add the other 2 functions here later
 }
