@@ -26,6 +26,7 @@ class Shape {
 	}
 
 	generateResultElements() {
+		// TODO: Add something here
 		return null;
 	}
 }
