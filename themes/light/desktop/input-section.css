@@ -18,12 +18,9 @@
 		gap: 1rem;
 	}
 
-	* {
-		color: var(--color-light);
-	}
-
-	p {
+	#input_box p {
 		margin: auto;
+		color: var(--color-light);
 	}
 
 	#input_box #input_title {
@@ -33,6 +30,7 @@
 	#input_box input[type=number] {
 		padding: 4px;
 		border: 1px solid var(--color-light);
+		color: var(--color-light);
 	}
 
 	#input_box input[type=number]::-webkit-outer-spin-button,
@@ -43,5 +41,20 @@
 
 	#input_box input[type=number] {
 		-moz-appearance: textfield;
+	}
+
+	button {
+		padding: 0.5rem;
+		background-color: var(--color-foreground);
+		color: var(--color-light);
+		border: none;
+		cursor: pointer;
+		border-radius: 4px;
+		transition-duration: 100ms;
+	}
+
+	button:active {
+		background-color: var(--color-light);
+		color: var(--color-foreground);
 	}
 }
