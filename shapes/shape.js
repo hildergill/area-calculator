@@ -13,9 +13,9 @@ class Shape {
 			'grid-template-columns: max-content auto;' +
 			'gap: 0.5rem;';
 
-		var elements = [`<div>`, `<p id="input_title">${title}</p>`, `<div style="${styleString}">`];
+		var elements = [, `<p id="input_title">${title}</p>`, `<div style="${styleString}">`];
 		for (var i = 0; i < inputElements.length; i++) elements.push(inputElements[i]);
-		elements.push('</div></div>');
+		elements.push('</div>');
 
 		var elementsString = '';
 		elements.forEach((value) => {

@@ -12,5 +12,14 @@
 		box-shadow: 0px 0px 4px var(--color-shadow);
 		background-color: var(--color-foreground);
 		padding: 1rem;
+		color: var(--color-light);
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: repeat(3, max-content);
+		gap: 1rem;
+	}
+
+	#input_box #input_title {
+		font-size: x-large;
 	}
 }
