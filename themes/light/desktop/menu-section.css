@@ -1,4 +1,4 @@
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
 	#menu_section {
 		display: grid;
 		grid-template-columns: auto;
@@ -19,9 +19,11 @@
 		text-align: left;
 		padding: 0.5rem;
 		font-size: 12pt;
+		cursor: pointer;
 	}
 
-	#shape_button_array button:hover {
+	#shape_button_array button:active,
+	#shape_button_array button.active {
 		background-color: var(--color-foreground);
 		color: var(--color-light);
 	}

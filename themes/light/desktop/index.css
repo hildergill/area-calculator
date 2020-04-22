@@ -1,4 +1,4 @@
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
 	:root {
 		--color-light: #c51236;
 		--color-medium: #ad102f;
@@ -17,7 +17,7 @@
 		height: 100vh;
 		width: 100vw;
 		display: grid;
-		grid-template-columns: 350px auto 350px;
+		grid-template-columns: 20rem auto 20rem;
 		grid-template-rows: auto;
 		background-color: var(--color-background);
 	}
