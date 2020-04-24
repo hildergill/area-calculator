@@ -22,7 +22,7 @@ function loadShapeInputs(index) {
 }
 
 function calculate() {
-	var resultsArray = document.getElementById('result_section');
+	var resultsArray = document.getElementById('result_array');
 
 	var inputObject = shapeArray[shapeIndex].getInputs();
 	var output = shapeArray[shapeIndex].getArea(inputObject);
@@ -33,4 +33,8 @@ function calculate() {
 
 function clearInputs() {
 	shapeArray[shapeIndex].clearInputs();
+}
+
+function clearResults() {
+	document.getElementById('result_array').innerHTML = null;
 }

@@ -1,6 +1,13 @@
 @media only screen and (min-width: 1000px) {
     #result_section {
-        overflow-y: auto;
+        display: grid;
+        grid-template-rows: auto max-content;
+        gap: 0.5rem;
+        height: 100vh;
+    }
+
+    #result_array {
+        overflow-y: scroll;
     }
 
     .result_box {
@@ -27,5 +34,11 @@
 
     .result_box #result_title {
         font-size: x-large;
+    }
+
+    #clear_box {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
     }
 }
