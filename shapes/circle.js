@@ -32,7 +32,7 @@ class Circle extends Shape {
 		var elementsStyleString = 'display: flex;flex-direction: row;';
 
 		var elements = [`<div style="${elementsStyleString}">`,
-			`<p>&pi; &#8729; ${inputs.radius}<sup>2</sup></p>`,
+		`<p>&pi; &#215; ${inputs.radius}<sup>2</sup></p>`,
 			`</div>`];
 
 		return super.generateResultElements(this.getName(), elements, results);

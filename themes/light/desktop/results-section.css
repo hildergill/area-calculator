@@ -1,44 +1,44 @@
 @media only screen and (min-width: 1000px) {
-    #result_section {
-        display: grid;
-        grid-template-rows: auto max-content;
-        gap: 0.5rem;
-        height: 100vh;
-    }
+	#result_section {
+		display: grid;
+		grid-template-rows: max-content max-content;
+		gap: 0.5rem;
 
-    #result_array {
-        overflow-y: scroll;
-    }
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
+		margin-left: 0.25rem;
+		margin-right: 0.5rem;
+	}
 
-    .result_box {
-        background-color: var(--color-light);
-        color: var(--color-foreground);
-        padding: 1rem;
-        border-radius: 4px;
-        box-shadow: 0px 0px 2px var(--color-dark);
-        display: grid;
-        grid-template-rows: repeat(3, auto);
-        gap: 0.25rem;
-        margin-bottom: 0.5rem;
-    }
+	.result_box {
+		background-color: var(--color-light);
+		color: var(--color-foreground);
+		padding: 1rem;
+		border-radius: 4px;
+		box-shadow: 0px 0px 2px var(--color-dark);
+		display: grid;
+		grid-template-rows: repeat(3, auto);
+		gap: 0.25rem;
+		margin-bottom: 0.5rem;
+	}
 
-    .result_box .fraction {
-        display: grid;
-        grid-template-rows: auto 1px auto;
-        grid-template-columns: auto;
-    }
+	.result_box .fraction {
+		display: grid;
+		grid-template-rows: auto 1px auto;
+		grid-template-columns: auto;
+	}
 
-    .result_box .fraction #fraction_line {
-        background-color: var(--color-foreground);
-    }
+	.result_box .fraction #fraction_line {
+		background-color: var(--color-foreground);
+	}
 
-    .result_box #result_title {
-        font-size: x-large;
-    }
+	.result_box #result_title {
+		font-size: x-large;
+	}
 
-    #clear_box {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-    }
+	#clear_box {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: auto;
+	}
 }

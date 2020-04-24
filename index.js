@@ -22,12 +22,12 @@ function loadShapeInputs(index) {
 }
 
 function calculate() {
-	var resultsArray = document.getElementById('result_array');
+	var resultsArray = document.getElementById('result_box_container');
 
 	var inputObject = shapeArray[shapeIndex].getInputs();
 	var output = shapeArray[shapeIndex].getArea(inputObject);
 
-	resultsArray.innerHTML += shapeArray[shapeIndex].generateResultElements(inputObject, output);
+	resultsArray.innerHTML = shapeArray[shapeIndex].generateResultElements(inputObject, output);
 	clearInputs()
 }
 
@@ -36,5 +36,5 @@ function clearInputs() {
 }
 
 function clearResults() {
-	document.getElementById('result_array').innerHTML = null;
+	document.getElementById('result_box_container').innerHTML = null;
 }
