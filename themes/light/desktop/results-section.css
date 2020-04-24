@@ -1,0 +1,8 @@
+.fraction {
+    display: grid;
+    grid-template-rows: auto 1px auto;
+    grid-template-columns: auto;
+}
+.fraction #fraction_line {
+    background-color: var(--color-foreground);
+}

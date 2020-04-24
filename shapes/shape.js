@@ -7,6 +7,7 @@ class Shape {
 		return null;
 	}
 
+	// TODO: Clean this method up later
 	generateInputElements(title, inputElements, rows) {
 		var styleString = 'display: grid;'
 			+ `grid-template-rows: repeat(${rows}, auto);`
@@ -33,16 +34,24 @@ class Shape {
 		return elementsString;
 	}
 
-	generateResultElements() {
-		// TODO: Add something here
-		return null;
+	generateResultElements(title, resultCalculations, result) {
+		var calculationsElements = '';
+		resultCalculations.map((value) => { calculationsElements += value + '\n'; });
+
+		var elements = ['<div class="result_box">',
+			`<p id="result_title">${title}</p>`,
+			calculationsElements,
+			`<p id="result_text">= ${result}</p>`,
+			'</div>'];
+
+		var returnValue = '';
+		elements.map((value) => { returnValue += value + '\n'; });
+		return returnValue;
 	}
 
 	getInputs() {
 		return null;
 	}
 
-	clearInputs() {
-		// Extend this method
-	}
+	clearInputs() { /* THIS METHOD IS FOR EXTENSIONS ONLY */ }
 }

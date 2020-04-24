@@ -28,5 +28,13 @@ class Circle extends Shape {
 		document.getElementById('radius_input').value = null;
 	}
 
-	// TODO: Add the other 2 functions here later
+	generateResultElements(inputs, results) {
+		var elementsStyleString = 'display: flex;flex-direction: row;';
+
+		var elements = [`<div style="${elementsStyleString}">`,
+			`<p>&pi; &#8729; ${inputs.radius}<sup>2</sup></p>`,
+			`</div>`];
+
+		return super.generateResultElements(this.getName(), elements, results);
+	}
 }

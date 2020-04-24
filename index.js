@@ -22,10 +22,15 @@ function loadShapeInputs(index) {
 }
 
 function calculate() {
-	console.log(shapeArray[shapeIndex].getInputs());
+	var resultsArray = document.getElementById('result_section');
+
+	var inputObject = shapeArray[shapeIndex].getInputs();
+	var output = shapeArray[shapeIndex].getArea(inputObject);
+
+	resultsArray.innerHTML += shapeArray[shapeIndex].generateResultElements(inputObject, output);
+	clearInputs()
 }
 
 function clearInputs() {
-	console.log('!');
 	shapeArray[shapeIndex].clearInputs();
 }

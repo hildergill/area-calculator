@@ -32,5 +32,14 @@ class Triangle extends Shape {
         document.getElementById('height_input').value = null;
     }
 
-    // TODO: Add the other 2 functions here later
+    generateResultElements(inputs, results) {
+        var numberElementsStyle = 'margin-top: auto;margin-bottom: auto;';
+
+        var elements = [`<div style="display: flex;flex-direction: rows;">`,
+            '<span class="fraction"><p>1</p><span id="fraction_line"></span><p>2</p></span>',
+            `<p style="${numberElementsStyle}">&#8729; ${inputs.width} &#8729; ${inputs.height}</p>`,
+            `</div>`];
+            
+        return super.generateResultElements(this.getName(), elements, results);
+    }
 }
