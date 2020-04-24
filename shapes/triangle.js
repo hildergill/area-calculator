@@ -4,7 +4,7 @@ class Triangle extends Shape {
     }
 
     getArea(inputs) {
-        return (inputs.height, inputs.width) / 2;
+        return (inputs.height * inputs.width) / 2;
     }
 
     generateInputElements() {
@@ -39,7 +39,7 @@ class Triangle extends Shape {
             '<span class="fraction"><p>1</p><span id="fraction_line"></span><p>2</p></span>',
             `<p style="${numberElementsStyle}">&#8729; ${inputs.width} &#8729; ${inputs.height}</p>`,
             `</div>`];
-            
+
         return super.generateResultElements(this.getName(), elements, results);
     }
 }
