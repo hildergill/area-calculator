@@ -1,12 +1,6 @@
 @media only screen and (min-width: 1000px) {
-    .fraction {
-        display: grid;
-        grid-template-rows: auto 1px auto;
-        grid-template-columns: auto;
-    }
-
-    .fraction #fraction_line {
-        background-color: var(--color-foreground);
+    #result_section {
+        overflow-y: auto;
     }
 
     .result_box {
@@ -18,9 +12,20 @@
         display: grid;
         grid-template-rows: repeat(3, auto);
         gap: 0.25rem;
+        margin-bottom: 0.5rem;
     }
 
-    #result_title {
+    .result_box .fraction {
+        display: grid;
+        grid-template-rows: auto 1px auto;
+        grid-template-columns: auto;
+    }
+
+    .result_box .fraction #fraction_line {
+        background-color: var(--color-foreground);
+    }
+
+    .result_box #result_title {
         font-size: x-large;
     }
 }
