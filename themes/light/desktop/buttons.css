@@ -30,4 +30,24 @@
 		color: var(--color-foreground);
 		background-color: var(--color-medium);
 	}
+
+	#shape_button_array button {
+		margin-bottom: 0.5rem;
+		padding: 0.5rem;
+		border: 0;
+		background-color: var(--color-light);
+		text-align: left;
+		border-radius: 4px;
+		color: var(--color-foreground);
+		fill: var(--color-foreground);
+		font-size: large;
+		cursor: pointer;
+	}
+
+	#shape_button_array button:active,
+	#shape_button_array button.active {
+		background-color: var(--color-foreground);
+		color: var(--color-light);
+		fill: var(--color-light);
+	}
 }
