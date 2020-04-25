@@ -4,8 +4,8 @@
 		grid-template-columns: max-content auto;
 		grid-template-rows: auto;
 		gap: 0.5rem;
-		color: var(--color-light);
-		fill: var(--color-light);
+		color: var(--color-button-face);
+		fill: var(--color-button-face);
 		background-color: var(--color-foreground);
 		padding: 0.5rem;
 		border: none;
@@ -17,5 +17,10 @@
 	button.icon_button p {
 		margin-top: auto;
 		margin-bottom: auto;
+	}
+
+	button.icon_button:hover {
+		fill: var(--color-light);
+		color: var(--color-light);
 	}
 }
