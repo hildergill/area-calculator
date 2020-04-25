@@ -15,23 +15,6 @@
 		flex-direction: column;
 	}
 
-	#shape_button_array button {
-		border: 0;
-		background-color: var(--color-light);
-		color: var(--color-foreground);
-		text-align: left;
-		padding: 0.5rem;
-		font-size: 12pt;
-		cursor: pointer;
-		margin: 0.25rem;
-	}
-
-	#shape_button_array button:active,
-	#shape_button_array button.active {
-		background-color: var(--color-foreground);
-		color: var(--color-light);
-	}
-
 	#title_box,
 	#about_box {
 		display: grid;
