@@ -44,19 +44,4 @@
 	#input_box input[type='number'] {
 		-moz-appearance: textfield;
 	}
-
-	button {
-		padding: 0.5rem;
-		background-color: var(--color-foreground);
-		color: var(--color-light);
-		border: none;
-		cursor: pointer;
-		border-radius: 4px;
-		transition-duration: 100ms;
-	}
-
-	button:active {
-		background-color: var(--color-light);
-		color: var(--color-foreground);
-	}
 }

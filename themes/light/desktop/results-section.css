@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1000px) {
+@media screen and (min-width: 1000px) {
 	#result_section {
 		display: grid;
 		grid-template-rows: max-content max-content;

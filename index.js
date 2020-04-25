@@ -4,7 +4,17 @@ var shapeIndex = 0;
 function loadShapeArraySelector() {
 	var shapeButtonArray = document.getElementById('shape_button_array');
 	shapeArray.forEach((value, index) => {
-		shapeButtonArray.innerHTML += `<button onclick="loadShapeInputs(${index});">${value.getName()}</button>`;
+		var buttonElements = [
+			`<button onclick="loadShapeInputs(${index});">`,
+			value.getIcon(),
+			`<p>${value.getName()}</p>`,
+			'</button>'
+		];
+
+		var buttonString = '';
+		buttonElements.forEach((value) => { buttonString += value; });
+
+		shapeButtonArray.innerHTML += buttonString;
 	});
 }
 
