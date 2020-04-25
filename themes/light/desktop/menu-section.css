@@ -23,10 +23,6 @@
 		gap: 0.5rem;
 	}
 
-	#about_box {
-		text-align: center;
-	}
-
 	#title_box p:nth-child(1) {
 		font-size: x-large;
 	}
