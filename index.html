@@ -6,6 +6,7 @@
 		<title>Area Calculator</title>
 
 		<link rel="stylesheet" href="./themes/fonts.css" />
+		<link rel="stylesheet" href="./themes/light/desktop/buttons.css" />
 		<link rel="stylesheet" href="./themes/light/desktop/index.css" />
 		<link rel="stylesheet" href="./themes/light/desktop/menu-section.css" />
 		<link rel="stylesheet" href="./themes/light/desktop/input-section.css" />
@@ -39,7 +40,14 @@
 
 		<div id="result_section">
 			<div class="common_box" id="clear_box">
-				<button onclick="clearResults();">Clear</button>
+				<button class="icon_button" onclick="clearResults();">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+						<path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+						<path d="M0 0h24v24H0z" fill="none" />
+					</svg>
+
+					<p>Clear</p>
+				</button>
 			</div>
 
 			<div id="result_box_container"></div>

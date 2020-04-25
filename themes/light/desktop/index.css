@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1000px) {
+@media screen and (min-width: 1000px) {
 	:root {
 		--color-light: #c51236;
 		--color-medium: #ad102f;
