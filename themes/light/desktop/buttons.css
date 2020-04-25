@@ -12,6 +12,7 @@
 		border-radius: 4px;
 		text-align: left;
 		cursor: pointer;
+		transition-duration: 100ms;
 	}
 
 	button.icon_button p {
@@ -22,5 +23,11 @@
 	button.icon_button:hover {
 		fill: var(--color-light);
 		color: var(--color-light);
+	}
+
+	button.icon_button:active {
+		fill: var(--color-foreground);
+		color: var(--color-foreground);
+		background-color: var(--color-medium);
 	}
 }
