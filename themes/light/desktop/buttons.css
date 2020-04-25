@@ -43,7 +43,7 @@
 		text-align: left;
 		border-radius: 4px;
 		color: var(--color-foreground);
-		fill: var(--color-foreground);
+		stroke: var(--color-foreground);
 		font-size: large;
 		cursor: pointer;
 	}
@@ -57,7 +57,7 @@
 	#shape_button_array button.active {
 		background-color: var(--color-foreground);
 		color: var(--color-light);
-		fill: var(--color-light);
+		stroke: var(--color-light);
 	}
 
 	button.common_button {
