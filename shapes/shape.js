@@ -54,4 +54,6 @@ class Shape {
 	}
 
 	clearInputs() { /* THIS METHOD IS FOR EXTENSIONS ONLY */ }
+
+	getIcon() { return null; }
 }
