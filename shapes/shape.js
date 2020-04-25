@@ -22,8 +22,8 @@ class Shape {
 		elements.push('</div>');
 
 		elements.push(`<div style="${buttonsContainerStyleString}">`,
-			'<button onclick="calculate();">Calculate</button>',
-			'<button onclick="clearInputs();">Clear</button>',
+			'<button class="common_button" onclick="calculate();">Calculate</button>',
+			'<button class="common_button" onclick="clearInputs();">Clear</button>',
 			'</div>');
 
 		var elementsString = '';
