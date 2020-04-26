@@ -20,6 +20,40 @@
 		color: var(--color-foreground);
 	}
 
+	#shape_button_array_box {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#shape_button_array_box button {
+		display: flex;
+		flex-direction: row;
+		padding: 0.5rem;
+		fill: var(--color-light-foreground);
+		color: var(--color-light-foreground);
+		background-color: var(--color-light-theme-light);
+		border: 0;
+		cursor: pointer;
+		margin-bottom: 0.5rem;
+	}
+
+	#shape_button_array_box button p,
+	#shape_button_array_box button svg {
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
+	#shape_button_array_box button:active,
+	#shape_button_array_box button.active {
+		fill: var(--color-light-theme-light);
+		color: var(--color-light-theme-light);
+		background-color: var(--color-light-foreground);
+	}
+
+	#shape_button_array_box button p {
+		margin-left: 0.5rem;
+	}
+
 	#settings_box {
 		display: grid;
 		grid-template-rows: repeat(3, max-content);
