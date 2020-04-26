@@ -7,6 +7,10 @@
 
 		<script src="./icons.js"></script>
 		<script src="./generators.js"></script>
+		<script src="./shapes/shape.js"></script>
+		<script src="./shapes/circle.js"></script>
+		<script src="./shapes/triangle.js"></script>
+		<script src="./index.js"></script>
 
 		<link rel="stylesheet" href="./stylesheets/common.css" />
 		<link rel="stylesheet" href="./stylesheets/common-box.css" />
@@ -14,7 +18,7 @@
 		<link rel="stylesheet" href="./stylesheets/icon-button.css" />
 	</head>
 
-	<body>
+	<body onload="loadShapeButtons();">
 		<div id="menu_section">
 			<script>
 				var titleBoxElements = ['<p>Area Calculator</p>', '<p>By <a href="https://github.com/hildergill">hildergill</a></p>'];
