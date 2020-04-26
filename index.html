@@ -6,14 +6,25 @@
 		<title>Area Calculator</title>
 
 		<script src="./generators.js"></script>
+		<script src="./icons.js"></script>
 	</head>
 
 	<body>
 		<div id="menu_section">
 			<script>
 				var titleBoxElements = ['<p>Area Calculator</p>', `<p>By <a href="https://github.com/hildergill">hildergill</a></p>`];
+
 				var shapeButtonsArrayBox = ['<!-- LEAVE THIS SECTION EMPTY -->'];
-				var settingsBox = ['<p>Add something here</p>'];
+
+				var settingsBox = [
+					generateIconButton(generateIcon('wip'), 'View repo on Github', 'view_repo_button'),
+					generateIconButton(generateIcon('wip'), 'Open source licenses', 'licenses_button'),
+				];
+
+				var menuSection = document.getElementById('menu_section');
+				menuSection.innerHTML += generateCommonBox(titleBoxElements, 'title_box');
+				menuSection.innerHTML += generateCommonBox(shapeButtonsArrayBox, 'shape_button_array_box');
+				menuSection.innerHTML += generateCommonBox(settingsBox, 'settings_box');
 			</script>
 		</div>
 
