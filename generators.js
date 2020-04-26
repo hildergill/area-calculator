@@ -16,7 +16,7 @@ function generateIconButton(icon, text, id = null) {
     if (id !== null) returnValue += `<button class="icon_button" id="${id}">`;
     else returnValue += '<button class="icon_button" >';
     returnValue += `${icon}\n<p>${text}</p>`;
-    returnValue += '</div>';
+    returnValue += '</button>';
 
     return returnValue;
 }
