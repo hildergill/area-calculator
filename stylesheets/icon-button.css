@@ -3,12 +3,11 @@ button.icon_button {
 	color: var(--color-light-shadow);
 	background-color: var(--color-light-foreground);
 	border: 0;
-	padding: var(--size-element-padding);
+	padding: 0.5rem;
 	display: flex;
 	flex-direction: row;
-	border-radius: var(--size-border-radius);
+	border-radius: 8px;
 	cursor: pointer;
-	transition-duration: 100ms;
 }
 
 button.icon_button:hover {
@@ -23,5 +22,5 @@ button.icon_button svg {
 }
 
 button.icon_button p {
-	margin-left: var(--size-element-margin);
+	margin-left: 0.5rem;
 }

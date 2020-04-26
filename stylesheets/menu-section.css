@@ -3,7 +3,7 @@
 		display: grid;
 		grid-template-rows: max-content auto max-content;
 		grid-template-columns: auto;
-		gap: var(--size-box-margin);
+		gap: 0.5rem;
 	}
 
 	#menu_section #title_box {
@@ -12,8 +12,8 @@
 	}
 
 	#menu_section #title_box p:nth-child(1) {
-		font-size: var(--size-text-title);
-		margin-bottom: var(--size-element-padding);
+		font-size: 20pt;
+		margin-bottom: 0.25rem;
 	}
 
 	#menu_section #title_box a {
