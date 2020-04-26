@@ -6,10 +6,16 @@
 	--color-light-shadow: darkgray;
 }
 
+@font-face {
+	font-family: 'Noto Sans';
+	src: url('../fonts/noto-sans/NotoSans-Regular.ttf');
+}
+
 * {
 	padding: 0;
 	margin: 0;
 	font-size: 12pt;
+	font-family: 'Noto Sans';
 }
 
 body {

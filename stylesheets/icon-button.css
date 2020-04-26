@@ -15,6 +15,11 @@ button.icon_button:hover {
 	color: var(--color-light-theme-light);
 }
 
+button.icon_button:active {
+	fill: var(--color-light-theme-dark);
+	color: var(--color-light-theme-dark);
+}
+
 button.icon_button p,
 button.icon_button svg {
 	margin-top: auto;
