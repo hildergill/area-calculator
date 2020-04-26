@@ -1,0 +1,22 @@
+@media screen and (min-width: 960px) {
+	#menu_section {
+		display: grid;
+		grid-template-rows: max-content auto max-content;
+		grid-template-columns: auto;
+		gap: var(--size-box-margin);
+	}
+
+	#menu_section #title_box {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#menu_section #title_box p:nth-child(1) {
+		font-size: var(--size-text-title);
+		margin-bottom: var(--size-element-padding);
+	}
+
+	#menu_section #title_box a {
+		color: var(--color-foreground);
+	}
+}
