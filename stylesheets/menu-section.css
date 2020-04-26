@@ -5,6 +5,13 @@
 		grid-template-rows: max-content auto max-content;
 		gap: 0.5rem;
 	}
+
+	#settings_box {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: repeat(3, auto);
+		gap: 0.5rem;
+	}
 }
 
 #title_box p:nth-child(1) {
