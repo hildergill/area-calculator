@@ -6,3 +6,12 @@
 		gap: 0.5rem;
 	}
 }
+
+#title_box p:nth-child(1) {
+	font-size: 24pt;
+	margin-bottom: 0.25rem;
+}
+
+#title_box a {
+	color: var(--color-light-foreground);
+}
