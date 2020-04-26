@@ -6,6 +6,39 @@
 		gap: 0.5rem;
 	}
 
+	#shape_buttons_box {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#shape_buttons_box button {
+		padding: 0.5rem;
+		display: flex;
+		flex-direction: row;
+		fill: var(--color-light-foreground);
+		color: var(--color-light-foreground);
+		background-color: var(--color-light-theme-light);
+		border: 0;
+		cursor: pointer;
+	}
+
+	#shape_buttons_box button p,
+	#shape_buttons_box button svg {
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
+	#shape_buttons_box button p {
+		margin-left: 0.5rem;
+	}
+
+	#shape_buttons_box button:active,
+	#shape_buttons_box button.active {
+		fill: var(--color-light-theme-light);
+		color: var(--color-light-theme-light);
+		background-color: var(--color-light-foreground);
+	}
+
 	#settings_box {
 		display: grid;
 		grid-template-columns: auto;
