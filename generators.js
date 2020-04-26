@@ -20,3 +20,16 @@ function generateIconButton(icon, text, id = null) {
 
     return returnValue;
 }
+
+function generateIcon(name) {
+    var returnValue = ''
+    icons.map((value) => {
+        if (name == value.name) {
+            value.iconElements.map((element) => {
+                returnValue += element + '\n';
+            });
+        }
+    });
+
+    return returnValue;
+}
