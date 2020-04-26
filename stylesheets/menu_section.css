@@ -1,0 +1,8 @@
+@media screen and (min-width: 960px) {
+	#menu_section {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: max-content auto max-content;
+		gap: 0.5rem;
+	}
+}
