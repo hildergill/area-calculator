@@ -1,12 +1,22 @@
-function generateCommonBox(containerID, elementArray, id = null) {
-    var commonBoxString = '';
+function generateCommonBox(elementArray, id = null) {
+    var returnValue = '';
 
-    if (id !== null) commonBoxString += `<div class="common_box" id="${id}">`;
-    else commonBoxString += '<div class="common_box">';
+    if (id !== null) returnValue += `<div class="common_box" id="${id}">`;
+    else returnValue += '<div class="common_box">';
 
-    elementArray.map((value) => { commonBoxString += value + '\n'; });
-    commonBoxString += '</div>';
+    elementArray.map((value) => { returnValue += value + '\n'; });
+    returnValue += '</div>';
 
-    var containerElement = document.getElementById(containerID);
-    containerElement.innerHTML += commonBoxString;
+    return returnValue;
+}
+
+function generateIconButton(icon, text, id = null) {
+    var returnValue = '';
+
+    if (id !== null) returnValue += `<button class="icon_button" id="${id}">`;
+    else returnValue += '<button class="icon_button" >';
+    returnValue += `${icon}\n<p>${text}</p>`;
+    returnValue += '</div>';
+
+    return returnValue;
 }
