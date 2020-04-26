@@ -5,6 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Area Calculator</title>
 
+		<script src="./shape/shape.js"></script>
+		<script src="./shape/circle.js"></script>
+		<script src="./index.js"></script>
 		<script src="./generators.js"></script>
 		<script src="./icons.js"></script>
 
@@ -14,7 +17,7 @@
 		<link rel="stylesheet" href="./stylesheets/menu-section.css" />
 	</head>
 
-	<body>
+	<body onload="loadShapeButtons();">
 		<div id="menu_section">
 			<script>
 				var titleBoxElements = ['<p>Area Calculator</p>', `<p>By <a href="https://github.com/hildergill">hildergill</a></p>`];
