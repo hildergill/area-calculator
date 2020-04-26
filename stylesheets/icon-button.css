@@ -1,0 +1,27 @@
+button.icon_button {
+	fill: var(--color-light-shadow);
+	color: var(--color-light-shadow);
+	background-color: var(--color-light-foreground);
+	border: 0;
+	padding: var(--size-element-padding);
+	display: flex;
+	flex-direction: row;
+	border-radius: var(--size-border-radius);
+	cursor: pointer;
+	transition-duration: 100ms;
+}
+
+button.icon_button:hover {
+	fill: var(--color-light-theme-light);
+	color: var(--color-light-theme-light);
+}
+
+button.icon_button p,
+button.icon_button svg {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+button.icon_button p {
+	margin-left: var(--size-element-margin);
+}
