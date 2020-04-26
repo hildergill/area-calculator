@@ -4,3 +4,9 @@ function generateCommonBox(elements, id = null) {
     returnValue += '</div>';
     return returnValue;
 }
+
+function generateIconButton(icon, text, id = null) {
+    var returnValue = (id !== null) ? `<div class="icon_button" id="${id}>"` : '<div class="icon_button">';
+    returnValue += `\n${icon}\n<p>${text}</p>\n</div>`;
+    return returnValue;
+}
