@@ -6,7 +6,21 @@ function generateCommonBox(elements, id = null) {
 }
 
 function generateIconButton(icon, text, id = null) {
-    var returnValue = (id !== null) ? `<div class="icon_button" id="${id}>"` : '<div class="icon_button">';
-    returnValue += `\n${icon}\n<p>${text}</p>\n</div>`;
+    var returnValue = (id !== null) ? `<button class="icon_button" id="${id}">` : '<button class="icon_button">';
+    returnValue += `\n${icon}\n<p>${text}</p>\n</button>`;
+    return returnValue;
+}
+
+function generateIcon(name) {
+    var returnValue = '';
+
+    icons.map((value) => {
+        if (name === value.name) {
+            value.icon.map((element) => {
+                returnValue += element;
+            });
+        }
+    });
+
     return returnValue;
 }

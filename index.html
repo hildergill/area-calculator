@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Area Calculator</title>
 
+		<script src="./icons.js"></script>
 		<script src="./generators.js"></script>
 	</head>
 
@@ -13,7 +14,11 @@
 			<script>
 				var titleBoxElements = ['<p>Area Calculator</p>', '<p>By <a href="https://github.com/hildergill">hildergill</a></p>'];
 				var shapeButtonsElements = ['<!-- LEAVE THIS SECTION EMPTY -->'];
-				var settingsBoxElements = ['<!-- LEAVE THIS SECTION EMPTY -->'];
+				var settingsBoxElements = [
+					generateIconButton(generateIcon('wip'), 'View repo on Github', 'view_repo_button'),
+					generateIconButton(generateIcon('wip'), 'Open source licenses', 'licenses_button'),
+					'<p>&copy; 2018-2020 Hilder Gill</p>',
+				];
 
 				var menuSectionElement = document.getElementById('menu_section');
 				menuSectionElement.innerHTML += generateCommonBox(titleBoxElements, 'title_box');
