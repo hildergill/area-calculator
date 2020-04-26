@@ -4,11 +4,26 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Area Calculator</title>
+
+		<script src="./common.js"></script>
 	</head>
 
 	<body>
-		<div id="menu_section"></div>
+		<div id="menu_section">
+			<script>
+				var githubPageLink = 'https://github.com/hildergill';
+				var titleBoxElements = ['<p>Area Calculator</p>', `<p>By <a href="${githubPageLink}">hildergill</a></p>`];
+				var shapeButtonsArrayBox = ['<!-- LEAVE THIS SECTION EMPTY -->'];
+				var settingsBox = ['<p>Add something here</p>'];
+
+				generateCommonBox('menu_section', titleBoxElements, 'title_box');
+				generateCommonBox('menu_section', shapeButtonsArrayBox, 'shape_buttons_array_box');
+				generateCommonBox('menu_section', settingsBox, 'settings_box');
+			</script>
+		</div>
+
 		<div id="input_section"></div>
+
 		<div id="result_array"></div>
 	</body>
 </html>
