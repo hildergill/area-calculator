@@ -27,4 +27,8 @@ class Shape {
 			'</div>';
 		return returnValue;
 	}
+
+	getInputs() {
+		return null;
+	}
 }

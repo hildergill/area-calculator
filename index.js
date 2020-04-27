@@ -25,3 +25,7 @@ function loadInput(index) {
 
 	inputSection.innerHTML = shapeArray[shapeIndex].generateInput();
 }
+
+function calculateArea() {
+	console.log(shapeArray[shapeIndex].getInputs());
+}

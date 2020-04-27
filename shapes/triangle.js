@@ -17,4 +17,11 @@ class Triangle extends Shape {
 
 		return super.generateInput(this.getName(), elements, 2);
 	}
+
+	getInputs() {
+		return {
+			width: Number.parseFloat(document.getElementById('width_input').value),
+			height: Number.parseFloat(document.getElementById('height_input').value),
+		};
+	}
 }

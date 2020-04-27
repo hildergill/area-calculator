@@ -11,4 +11,10 @@ class Circle extends Shape {
 		const elements = ['<p>Radius: </p>', '<input type="number" step="0.001" id="radius_input">'];
 		return super.generateInput(this.getName(), elements, 1);
 	}
+
+	getInputs() {
+		return {
+			radius: Number.parseFloat(document.getElementById('radius_input').value),
+		};
+	}
 }
