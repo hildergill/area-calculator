@@ -28,7 +28,7 @@ body {
 @media (orientation: landscape) {
 	body {
 		display: grid;
-		grid-template-columns: 20rem auto 20rem;
+		grid-template-columns: 20% auto 20%;
 		grid-template-rows: auto;
 	}
 }
