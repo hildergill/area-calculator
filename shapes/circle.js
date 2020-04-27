@@ -1,9 +1,14 @@
 class Circle extends Shape {
-    getName() {
-        return 'Circle';
-    }
+	getName() {
+		return 'Circle';
+	}
 
-    getIcon() {
-        return generateIcon('circle');
-    }
+	getIcon() {
+		return generateIcon('circle');
+	}
+
+	generateInput() {
+		const elements = ['<p>Radius: </p>', '<input type="number" step="0.001" id="radius_input">'];
+		return super.generateInput(this.getName(), elements, 1);
+	}
 }
