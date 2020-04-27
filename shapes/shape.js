@@ -21,7 +21,7 @@ class Shape {
 
 		returnValue += '</div>';
 		returnValue +=
-			'<div>\n' +
+			'<div id="button_container">\n' +
 			'<button onclick="clearInputs();">Clear</button>\n' +
 			'<button onclick="calculateArea();">Calculate</button>\n' +
 			'</div>';
