@@ -23,5 +23,5 @@ function loadInput(index) {
 		else shapeButtonArray[i].classList.remove('active');
 	}
 
-	inputSection.innerHTML += shapeArray[shapeIndex].generateInput();
+	inputSection.innerHTML = shapeArray[shapeIndex].generateInput();
 }
