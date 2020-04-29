@@ -16,6 +16,7 @@
 		<link rel="stylesheet" href="./stylesheets/common-box.css" />
 		<link rel="stylesheet" href="./stylesheets/menu-section.css" />
 		<link rel="stylesheet" href="./stylesheets/input-section.css" />
+		<link rel="stylesheet" href="./stylesheets/output-section.css" />
 		<link rel="stylesheet" href="./stylesheets/icon-button.css" />
 	</head>
 
@@ -41,7 +42,23 @@
 				menuSectionElement.innerHTML += generateCommonBox(settingsBoxElements, 'settings_box');
 			</script>
 		</div>
+
 		<div id="input_section"></div>
-		<div id="output_section"></div>
+
+		<div id="output_section">
+			<div id="output_box"></div>
+
+			<div class="common_box" id="clear_output_button_box">
+				<script>
+					var clearOutputButtonBox = document.getElementById('clear_output_button_box');
+
+					clearOutputButtonBox.innerHTML += generateIconButton(
+						generateIcon('wip'),
+						'Clear output',
+						'clear_output_button',
+					);
+				</script>
+			</div>
+		</div>
 	</body>
 </html>
