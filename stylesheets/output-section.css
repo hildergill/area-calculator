@@ -15,8 +15,42 @@
 	gap: 0.5rem;
 }
 
+#output_box div {
+	fill: var(--color-light-foreground);
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: repeat(3, max-content);
+	gap: 0.25rem;
+	font-size: 12pt;
+}
+
+#output_section div #title_box {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-columns: max-content auto;
+	gap: 0.5rem;
+}
+
+#output_section div #title_box p,
+#output_section div #title_box svg {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
 #clear_output_button_box {
 	display: grid;
 	grid-template-columns: auto;
 	grid-template-rows: auto;
+}
+
+.fraction {
+	display: grid;
+	grid-template-columns: max-content;
+	grid-template-rows: max-content 1px max-content;
+	text-align: center;
+	gap: 0.1rem;
+}
+
+.fraction span {
+	background-color: var(--color-light-foreground);
 }
