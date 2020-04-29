@@ -31,4 +31,8 @@ class Shape {
 	getInputs() {
 		return null;
 	}
+
+	getArea(input) {
+		return null;
+	}
 }

@@ -17,4 +17,8 @@ class Circle extends Shape {
 			radius: Number.parseFloat(document.getElementById('radius_input').value),
 		};
 	}
+
+	getArea(input) {
+		return Math.PI * Math.pow(input.radius, 2);
+	}
 }

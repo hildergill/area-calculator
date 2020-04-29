@@ -24,4 +24,8 @@ class Triangle extends Shape {
 			height: Number.parseFloat(document.getElementById('height_input').value),
 		};
 	}
+
+	getArea(input) {
+		return (input.width * input.height) / 2;
+	}
 }
