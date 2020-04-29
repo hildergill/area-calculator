@@ -28,4 +28,15 @@ class Triangle extends Shape {
 	getArea(input) {
 		return (input.width * input.height) / 2;
 	}
+
+	generateOutputBox(inputs) {
+		const inputElements = [
+			'<p><span class="fraction">',
+			`<p>(${inputs.width} &times; ${inputs.height})</p>`,
+			'<span></span>',
+			'<p>2</p>',
+			'</span></p>',
+		];
+		return super.generateOutputBox(this.getIcon(), this.getName(), inputElements, this.getArea(inputs));
+	}
 }

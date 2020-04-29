@@ -35,4 +35,15 @@ class Shape {
 	getArea(input) {
 		return null;
 	}
+
+	generateOutputBox(icon, title, inputElements, output) {
+		var returnValue = '<div class="output_box">' + `<span>\n${icon}` + `\n<p>${title}</p>\n</span>`;
+
+		inputElements.map((value) => {
+			returnValue += `\n${value}`;
+		});
+
+		returnValue += `<p>${output}</p>\n</div>`;
+		return returnValue;
+	}
 }

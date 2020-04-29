@@ -21,4 +21,9 @@ class Circle extends Shape {
 	getArea(input) {
 		return Math.PI * Math.pow(input.radius, 2);
 	}
+
+	generateOutputBox(inputs) {
+		const inputElements = [`<p>&pi; &times; ${inputs.radius}<sup>2</sup></p>`];
+		return super.generateOutputBox(this.getIcon(), this.getName(), inputElements, this.getArea(inputs));
+	}
 }
