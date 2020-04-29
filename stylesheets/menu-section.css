@@ -1,4 +1,4 @@
-@media screen and (min-width: 960px) {
+@media (orientation: landscape) {
 	#menu_section {
 		display: grid;
 		grid-template-columns: auto;

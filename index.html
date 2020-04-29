@@ -15,14 +15,20 @@
 		<link rel="stylesheet" href="./stylesheets/common.css" />
 		<link rel="stylesheet" href="./stylesheets/common-box.css" />
 		<link rel="stylesheet" href="./stylesheets/menu-section.css" />
+		<link rel="stylesheet" href="./stylesheets/input-section.css" />
 		<link rel="stylesheet" href="./stylesheets/icon-button.css" />
 	</head>
 
-	<body onload="loadShapeButtons();">
+	<body onload="loadShapeButtons();loadInput(0);">
 		<div id="menu_section">
 			<script>
-				var titleBoxElements = ['<p>Area Calculator</p>', '<p>By <a href="https://github.com/hildergill">hildergill</a></p>'];
+				var titleBoxElements = [
+					'<p>Area Calculator</p>',
+					'<p>By <a href="https://github.com/hildergill">hildergill</a></p>',
+				];
+
 				var shapeButtonsElements = ['<!-- LEAVE THIS SECTION EMPTY -->'];
+
 				var settingsBoxElements = [
 					generateIconButton(generateIcon('wip'), 'View repo on Github', 'view_repo_button'),
 					generateIconButton(generateIcon('wip'), 'Open source licenses', 'licenses_button'),

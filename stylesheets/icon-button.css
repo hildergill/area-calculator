@@ -11,9 +11,13 @@ button.icon_button {
 	transition-duration: 100ms;
 }
 
-button.icon_button p {
+button.icon_button p,
+button.icon_button svg {
 	margin-top: auto;
 	margin-bottom: auto;
+}
+
+button.icon_button p {
 	margin-left: 0.5rem;
 }
 
