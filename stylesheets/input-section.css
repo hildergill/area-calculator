@@ -24,11 +24,15 @@
 #input_section input {
 	border: 1px solid var(--color-light-theme-light);
 }
+
 #input_section #button_container {
 	display: flex;
 	flex-direction: row;
-	justify-content: right;
-	gap: 0.5rem;
+	justify-content: flex-end;
+}
+
+#input_section #button_container button:first-child {
+	margin-right: 0.5rem;
 }
 
 #input_section button {
@@ -37,6 +41,7 @@
 	border: 0;
 	transition-duration: 100ms;
 	border-radius: 8px;
+	cursor: pointer;
 }
 
 input[type='number']::-webkit-inner-spin-button,
