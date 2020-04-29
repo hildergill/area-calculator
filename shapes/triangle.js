@@ -31,12 +31,13 @@ class Triangle extends Shape {
 
 	generateOutputBox(inputs) {
 		const inputElements = [
-			'<p><span class="fraction">',
+			'<span class="fraction">',
 			`<p>(${inputs.width} &times; ${inputs.height})</p>`,
 			'<span></span>',
 			'<p>2</p>',
-			'</span></p>',
+			'</span>',
 		];
+
 		return super.generateOutputBox(this.getIcon(), this.getName(), inputElements, this.getArea(inputs));
 	}
 }

@@ -40,7 +40,7 @@ class Shape {
 		var returnValue = '<div class="common_box">' + `<span id="title_box">\n${icon}` + `\n<p>${title}</p>\n</span>`;
 
 		inputElements.map((value) => {
-			returnValue += `\n${value}`;
+			returnValue += `${value}`;
 		});
 
 		returnValue += `<p>${output}</p>\n</div>`;
