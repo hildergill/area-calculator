@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,8 +32,17 @@
 				var shapeButtonsElements = ['<!-- LEAVE THIS SECTION EMPTY -->'];
 
 				var settingsBoxElements = [
-					generateIconButton(generateIcon('wip'), 'View repo on Github', 'view_repo_button'),
-					generateIconButton(generateIcon('wip'), 'Open source licenses', 'licenses_button'),
+					generateIconButton(generateIcon('wip'),
+						'View repo on Github',
+						'view_repo_button',
+						'viewRepo();'),
+
+					generateIconButton(
+						generateIcon('wip'),
+						'Open source licenses',
+						'licenses_button',
+						'viewLicense();'),
+
 					'<p>&copy; 2018-2020 Hilder Gill</p>',
 				];
 
@@ -62,4 +72,5 @@
 			</div>
 		</div>
 	</body>
+
 </html>

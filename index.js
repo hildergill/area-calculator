@@ -36,3 +36,11 @@ function clearOutput() {
 	var outputBox = document.getElementById('output_box');
 	outputBox.innerHTML = null;
 }
+
+function viewRepo() {
+	window.location = 'https://github.com/hildergill/area-calculator';
+}
+
+function viewLicense() {
+	// TODO: Add the "Open source licences" page here
+}
