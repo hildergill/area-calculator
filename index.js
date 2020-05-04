@@ -42,5 +42,5 @@ function viewRepo() {
 }
 
 function viewLicense() {
-	// TODO: Add the "Open source licences" page here
+	window.location = './licenses.html';
 }
