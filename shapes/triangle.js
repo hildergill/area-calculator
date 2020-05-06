@@ -20,8 +20,13 @@ class Triangle extends Shape {
 
 	getInputs() {
 		return {
-			width: Number.parseFloat(document.getElementById('width_input').value),
-			height: Number.parseFloat(document.getElementById('height_input').value),
+			width: Number.parseFloat(
+				document.getElementById('width_input').value
+			),
+
+			height: Number.parseFloat(
+				document.getElementById('height_input').value
+			),
 		};
 	}
 
@@ -38,6 +43,11 @@ class Triangle extends Shape {
 			'</span>',
 		];
 
-		return super.generateOutputBox(this.getIcon(), this.getName(), inputElements, this.getArea(inputs));
+		return super.generateOutputBox(
+			this.getIcon(),
+			this.getName(),
+			inputElements,
+			this.getArea(inputs)
+		);
 	}
 }

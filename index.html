@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,27 +28,46 @@
 					'<p>By <a href="https://github.com/hildergill">hildergill</a></p>',
 				];
 
-				var shapeButtonsElements = ['<!-- LEAVE THIS SECTION EMPTY -->'];
+				var shapeButtonsElements = [
+					'<!-- LEAVE THIS SECTION EMPTY -->',
+				];
 
 				var settingsBoxElements = [
-					generateIconButton(generateIcon('github'),
+					generateIconButton(
+						generateIcon('github'),
 						'View repo on Github',
 						'view_repo_button',
-						'viewRepo();'),
+						'viewRepo();'
+					),
 
 					generateIconButton(
 						generateIcon('open-source-licenses'),
 						'Open source licenses',
 						'licenses_button',
-						'viewLicense();'),
+						'viewLicense();'
+					),
 
 					'<p>&copy; 2018-2020 Hilder Gill</p>',
 				];
 
-				var menuSectionElement = document.getElementById('menu_section');
-				menuSectionElement.innerHTML += generateCommonBox(titleBoxElements, 'title_box');
-				menuSectionElement.innerHTML += generateCommonBox(shapeButtonsElements, 'shape_buttons_box');
-				menuSectionElement.innerHTML += generateCommonBox(settingsBoxElements, 'settings_box');
+				var menuSectionElement = document.getElementById(
+					'menu_section'
+				);
+
+				menuSectionElement.innerHTML += generateCommonBox(
+					titleBoxElements,
+					'title_box'
+				);
+
+				menuSectionElement.innerHTML += generateCommonBox(
+					shapeButtonsElements,
+					'shape_buttons_box'
+				);
+
+				menuSectionElement.innerHTML += generateCommonBox(
+					settingsBoxElements,
+					'settings_box'
+				);
 			</script>
 		</div>
 
@@ -60,17 +78,18 @@
 
 			<div class="common_box" id="clear_output_button_box">
 				<script>
-					var clearOutputButtonBox = document.getElementById('clear_output_button_box');
+					var clearOutputButtonBox = document.getElementById(
+						'clear_output_button_box'
+					);
 
 					clearOutputButtonBox.innerHTML += generateIconButton(
 						generateIcon('delete'),
 						'Clear output',
 						'clear_output_button',
-						'clearOutput()',
+						'clearOutput()'
 					);
 				</script>
 			</div>
 		</div>
 	</body>
-
 </html>
