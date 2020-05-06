@@ -32,3 +32,11 @@ body {
 		grid-template-rows: auto;
 	}
 }
+
+@media (orientation: portrait) {
+	body {
+		display: grid;
+		grid-template-rows: max-content auto max-content;
+		grid-template-columns: auto;
+	}
+}
