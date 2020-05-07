@@ -14,7 +14,9 @@ function loadShapeButtons() {
 }
 
 function loadInput(index) {
-	var shapeButtonArray = document.getElementById('shape_buttons_box').getElementsByTagName('button');
+	var shapeButtonArray = document
+		.getElementById('shape_buttons_box')
+		.getElementsByTagName('button');
 	var inputSection = document.getElementById('input_section');
 	shapeIndex = index;
 
@@ -43,4 +45,8 @@ function viewRepo() {
 
 function viewLicense() {
 	window.location = './licenses.html';
+}
+
+function clearInputs() {
+	shapeArray[shapeIndex].clearInputs();
 }

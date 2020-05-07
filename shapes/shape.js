@@ -49,4 +49,8 @@ class Shape {
 		returnValue += `<p>${output}</p>\n</div>`;
 		return returnValue;
 	}
+
+	clearInputs() {
+		// Overwrite this method
+	}
 }

@@ -17,9 +17,7 @@ class Circle extends Shape {
 
 	getInputs() {
 		return {
-			radius: Number.parseFloat(
-				document.getElementById('radius_input').value
-			),
+			radius: Number.parseFloat(document.getElementById('radius_input').value),
 		};
 	}
 
@@ -28,14 +26,16 @@ class Circle extends Shape {
 	}
 
 	generateOutputBox(inputs) {
-		const inputElements = [
-			`<p>&pi; &times; ${inputs.radius}<sup>2</sup></p>`,
-		];
+		const inputElements = [`<p>&pi; &times; ${inputs.radius}<sup>2</sup></p>`];
 		return super.generateOutputBox(
 			this.getIcon(),
 			this.getName(),
 			inputElements,
 			this.getArea(inputs)
 		);
+	}
+
+	clearInputs() {
+		document.getElementById('radius_input').value = null;
 	}
 }
