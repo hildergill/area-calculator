@@ -1,4 +1,4 @@
-const shapeArray = [new Circle(), new Triangle(), new Rectangle()];
+const shapeArray = [new Circle(), new Triangle(), new Rectangle(), new Trapezium()];
 var shapeIndex = 0;
 
 function loadShapeButtons() {
