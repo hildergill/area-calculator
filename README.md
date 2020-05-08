@@ -15,3 +15,7 @@ _Area Calculator_ is a website that calculate the area for shapes written in van
 | `./icons`       | Contains icons that is used for shape buttons and area output boxes   |
 | `./shapes`      | Contains JavaScript scripts that contains the codes for shape classes |
 | `./stylesheets` | Contains CSS files for the website's stylesheet                       |
+
+# License
+
+Area Calculator is under the MIT License. Please refer to [LICENSE](https://github.com/hildergill/area-calculator/blob/master/LICENSE). Third party components are protected under their own licenses so please refer to their own licenses for further details.
