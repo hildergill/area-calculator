@@ -4,7 +4,7 @@ class Trapezium extends Shape {
 	}
 
 	getIcon() {
-		return generateIcon('wip');
+		return generateIcon('trapezium');
 	}
 
 	generateInput() {

@@ -4,7 +4,7 @@ class Rectangle extends Shape {
 	}
 
 	getIcon() {
-		return generateIcon('wip');
+		return generateIcon('rectangle');
 	}
 
 	generateInput() {
