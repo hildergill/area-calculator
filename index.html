@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Area Calculator</title>
 
+		<!-- Import scripts -->
 		<script src="./icons.js"></script>
 		<script src="./generators.js"></script>
 		<script src="./shapes/shape.js"></script>
@@ -14,6 +15,7 @@
 		<script src="./shapes/trapezium.js"></script>
 		<script src="./index.js"></script>
 
+		<!-- Import stylesheets -->
 		<link rel="stylesheet" href="./stylesheets/common.css" />
 		<link rel="stylesheet" href="./stylesheets/common-box.css" />
 		<link rel="stylesheet" href="./stylesheets/menu-section.css" />
@@ -21,6 +23,7 @@
 		<link rel="stylesheet" href="./stylesheets/output-section.css" />
 		<link rel="stylesheet" href="./stylesheets/icon-button.css" />
 
+		<!-- Import favicons -->
 		<link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png" />
 		<link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png" />
 		<link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png" />
@@ -41,6 +44,7 @@
 	</head>
 
 	<body onload="loadShapeButtons();loadInput(0);">
+		<!-- The "menu section"; The section on the left of the viewport -->
 		<div id="menu_section">
 			<script>
 				var titleBoxElements = ['<p>Area Calculator</p>', '<p>By <a href="https://github.com/hildergill">hildergill</a></p>'];
@@ -63,8 +67,10 @@
 			</script>
 		</div>
 
+		<!-- The "input section"; The section on the middle of the website -->
 		<div id="input_section"></div>
 
+		<!-- The "output section"; The section on the right of the website -->
 		<div id="output_section">
 			<div id="output_box"></div>
 
