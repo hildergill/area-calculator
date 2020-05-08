@@ -4,7 +4,7 @@ By hildergill
 
 ## What is _"Area Calculator"_
 
-_Area Calculator_ is a website that calculate the area for shapes. Besites that, this project doesn't have any other reason to exist.
+_Area Calculator_ is a website that calculate the area for shapes written in vanilla CSS and JavaScript. Besites that, this project doesn't have any other reason to exist.
 
 ## Directory descriptions
 
