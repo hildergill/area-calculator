@@ -10,6 +10,8 @@
 		<script src="./shapes/shape.js"></script>
 		<script src="./shapes/circle.js"></script>
 		<script src="./shapes/triangle.js"></script>
+		<script src="./shapes/rectangle.js"></script>
+		<script src="./shapes/trapezium.js"></script>
 		<script src="./index.js"></script>
 
 		<link rel="stylesheet" href="./stylesheets/common.css" />
@@ -28,9 +30,7 @@
 					'<p>By <a href="https://github.com/hildergill">hildergill</a></p>',
 				];
 
-				var shapeButtonsElements = [
-					'<!-- LEAVE THIS SECTION EMPTY -->',
-				];
+				var shapeButtonsElements = ['<!-- LEAVE THIS SECTION EMPTY -->'];
 
 				var settingsBoxElements = [
 					generateIconButton(
@@ -50,14 +50,9 @@
 					'<p>&copy; 2018-2020 Hilder Gill</p>',
 				];
 
-				var menuSectionElement = document.getElementById(
-					'menu_section'
-				);
+				var menuSectionElement = document.getElementById('menu_section');
 
-				menuSectionElement.innerHTML += generateCommonBox(
-					titleBoxElements,
-					'title_box'
-				);
+				menuSectionElement.innerHTML += generateCommonBox(titleBoxElements, 'title_box');
 
 				menuSectionElement.innerHTML += generateCommonBox(
 					shapeButtonsElements,
@@ -78,9 +73,7 @@
 
 			<div class="common_box" id="clear_output_button_box">
 				<script>
-					var clearOutputButtonBox = document.getElementById(
-						'clear_output_button_box'
-					);
+					var clearOutputButtonBox = document.getElementById('clear_output_button_box');
 
 					clearOutputButtonBox.innerHTML += generateIconButton(
 						generateIcon('delete'),

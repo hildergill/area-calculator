@@ -1,10 +1,10 @@
-class Triangle extends Shape {
+class Rectangle extends Shape {
 	getName() {
-		return 'Triangle';
+		return 'Rectangle';
 	}
 
 	getIcon() {
-		return generateIcon('triangle');
+		return generateIcon('rectangle');
 	}
 
 	generateInput() {
@@ -26,17 +26,11 @@ class Triangle extends Shape {
 	}
 
 	getArea(input) {
-		return (input.width * input.height) / 2;
+		return input.width * input.height;
 	}
 
 	generateOutputBox(inputs) {
-		const inputElements = [
-			'<span class="fraction">',
-			`<p>(${inputs.width} &times; ${inputs.height})</p>`,
-			'<span></span>',
-			'<p>2</p>',
-			'</span>',
-		];
+		const inputElements = [`<p>(${inputs.width} &times; ${inputs.height})</p>`];
 
 		return super.generateOutputBox(
 			this.getIcon(),
