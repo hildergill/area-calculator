@@ -1,3 +1,9 @@
+/* ============================================================ */
+/* This is the stylehseet of the "menu section"                 */
+/* The menu section is the container that contains the shape    */
+/* selector and additional stuff                                */
+/* ============================================================ */
+
 @media (orientation: landscape) {
 	#menu_section {
 		display: grid;

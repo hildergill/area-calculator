@@ -1,3 +1,9 @@
+/* ============================================================ */
+/* This is the stylehseet of the "output section"               */
+/* The output section contains the output array and the         */
+/* box that contains the "Clear output" button                  */
+/* ============================================================ */
+
 @media (orientation: landscape) {
 	#output_section {
 		display: grid;

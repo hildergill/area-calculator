@@ -1,3 +1,9 @@
+/* ============================================================ */
+/* This is the stylehseet of the "input section"                */
+/* The input section contains the inputs                        */
+/* for the shape's dimension                                    */
+/* ============================================================ */
+
 #input_section {
 	padding: 1rem;
 	background-color: var(--color-light-foreground);
