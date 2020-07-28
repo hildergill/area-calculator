@@ -88,7 +88,7 @@ function clearInputs() {
 	menuSectionElement.innerHTML += generateCommonBox(settingsBoxElements, 'settings_box');
 */
 
-function generateMenuTitle() {
+function generateMenuTitleBox() {
 	var menuSectionElement = document.getElementById('menu_section'),
 		authorTitleLink = document.createElement('a'),
 		titleBoxElements = [document.createElement('p'), document.createElement('p')];
@@ -101,4 +101,9 @@ function generateMenuTitle() {
 	titleBoxElements[1].appendChild(authorTitleLink);
 
 	menuSectionElement.appendChild(generateCommonBox(titleBoxElements, 'title_box'));
+}
+
+function generateShapeButtonBox() {
+	var menuSectionElement = document.getElementById('menu_section');
+	menuSectionElement.appendChild(generateCommonBox([document.createComment('LEAVE THIS SECTION EMPTY')], 'shape_buttons_box'));
 }
