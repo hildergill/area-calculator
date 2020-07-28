@@ -1,11 +1,14 @@
 // Function to generate a "CommonBox"
 function generateCommonBox(elements, id = null) {
-	var returnValue = id !== null ? `<div class="common_box" id="${id}">` : '<div class="common_box">';
+	var commonBox = document.createElement('div');
+	commonBox.classList.add('common_box');
+	commonBox.id = id;
+
 	elements.map((value) => {
-		returnValue += value + '\n';
+		commonBox.appendChild(value);
 	});
-	returnValue += '</div>';
-	return returnValue;
+
+	return commonBox;
 }
 
 // Function to generate an "IconButton"
