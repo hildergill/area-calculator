@@ -8,9 +8,17 @@ var shapeIndex = 0;
 function loadShapeButtons() {
 	var shapeButtonArray = document.getElementById('shape_buttons_box');
 
-	shapeArray.map((value, index) => {
-		shapeButtonArray.innerHTML +=
-			`<button onclick="loadInput(${index})">` + `\n${value.getIcon()}` + `\n<p>${value.getName()}</p>` + `\n</button>`;
+	shapeArray.map((value, index) => {		
+		const shapeButton = document.createElement('button'),
+			shapeButtonText = document.createElement('p');
+		
+		shapeButtonText.innerHTML = value.getName();
+		
+		shapeButton.addEventListener('click', () => { loadInput(index); });
+		shapeButton.innerHTML += value.getIcon();
+		shapeButton.appendChild(shapeButtonText);
+
+		shapeButtonArray.appendChild(shapeButton);
 	});
 }
 
