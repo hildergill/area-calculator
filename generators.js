@@ -18,6 +18,7 @@ function generateIconButton(icon, text, id = null) {
 	
 	iconButton.id = id;
 	iconButton.innerHTML = icon;
+	iconButton.classList.add('icon_button');
 
 	iconButtonText.innerHTML = text;
 	iconButton.appendChild(iconButtonText);

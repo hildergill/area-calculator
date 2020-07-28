@@ -68,26 +68,6 @@ function clearInputs() {
 	shapeArray[shapeIndex].clearInputs();
 }
 
-/*
-	var titleBoxElements = ['<p>Area Calculator</p>', '<p>By <a href="https://github.com/hildergill">hildergill</a></p>'];
-
-	var shapeButtonsElements = ['<!-- LEAVE THIS SECTION EMPTY -->'];
-
-	var settingsBoxElements = [
-		generateIconButton(generateIcon('github'), 'View repo on Github', 'view_repo_button', 'viewRepo();'),
-
-		generateIconButton(generateIcon('open-source-licenses'), 'Open source licenses', 'licenses_button', 'viewLicense();'),
-
-		'<p>&copy; 2018-2020 Hilder Gill</p>',
-	];
-
-	var menuSectionElement = document.getElementById('menu_section');
-
-	menuSectionElement.innerHTML += generateCommonBox(titleBoxElements, 'title_box');
-	menuSectionElement.innerHTML += generateCommonBox(shapeButtonsElements, 'shape_buttons_box');
-	menuSectionElement.innerHTML += generateCommonBox(settingsBoxElements, 'settings_box');
-*/
-
 function generateMenuTitleBox() {
 	var menuSectionElement = document.getElementById('menu_section'),
 		authorTitleLink = document.createElement('a'),
@@ -107,3 +87,19 @@ function generateShapeButtonBox() {
 	var menuSectionElement = document.getElementById('menu_section');
 	menuSectionElement.appendChild(generateCommonBox([document.createComment('LEAVE THIS SECTION EMPTY')], 'shape_buttons_box'));
 }
+
+function generateSettingsBox() {
+	var menuSectionElement = document.getElementById('menu_section'),
+		settingsBoxElements = [
+			generateIconButton(generateIcon('github'), 'View repo on Github', 'view_repo_button'),
+			generateIconButton(generateIcon('open-source-licenses'), 'Open source licenses', 'licenses_button'),
+			document.createElement('p'),
+		];
+
+	settingsBoxElements[0].addEventListener('click', viewRepo);
+	settingsBoxElements[1].addEventListener('click', viewLicense);
+
+	menuSectionElement.appendChild(generateCommonBox(settingsBoxElements, 'settings_box'));
+}
+
+// TODO Add documentations later
