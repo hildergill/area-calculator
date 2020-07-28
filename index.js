@@ -8,13 +8,15 @@ var shapeIndex = 0;
 function loadShapeButtons() {
 	var shapeButtonArray = document.getElementById('shape_buttons_box');
 
-	shapeArray.map((value, index) => {		
+	shapeArray.map((value, index) => {
 		const shapeButton = document.createElement('button'),
 			shapeButtonText = document.createElement('p');
-		
+
 		shapeButtonText.innerHTML = value.getName();
-		
-		shapeButton.addEventListener('click', () => { loadInput(index); });
+
+		shapeButton.addEventListener('click', () => {
+			loadInput(index);
+		});
 		shapeButton.innerHTML += value.getIcon();
 		shapeButton.appendChild(shapeButtonText);
 
@@ -64,4 +66,39 @@ function viewLicense() {
 // Function to clear all inputs
 function clearInputs() {
 	shapeArray[shapeIndex].clearInputs();
+}
+
+/*
+	var titleBoxElements = ['<p>Area Calculator</p>', '<p>By <a href="https://github.com/hildergill">hildergill</a></p>'];
+
+	var shapeButtonsElements = ['<!-- LEAVE THIS SECTION EMPTY -->'];
+
+	var settingsBoxElements = [
+		generateIconButton(generateIcon('github'), 'View repo on Github', 'view_repo_button', 'viewRepo();'),
+
+		generateIconButton(generateIcon('open-source-licenses'), 'Open source licenses', 'licenses_button', 'viewLicense();'),
+
+		'<p>&copy; 2018-2020 Hilder Gill</p>',
+	];
+
+	var menuSectionElement = document.getElementById('menu_section');
+
+	menuSectionElement.innerHTML += generateCommonBox(titleBoxElements, 'title_box');
+	menuSectionElement.innerHTML += generateCommonBox(shapeButtonsElements, 'shape_buttons_box');
+	menuSectionElement.innerHTML += generateCommonBox(settingsBoxElements, 'settings_box');
+*/
+
+function generateMenuTitle() {
+	var menuSectionElement = document.getElementById('menu_section'),
+		authorTitleLink = document.createElement('a'),
+		titleBoxElements = [document.createElement('p'), document.createElement('p')];
+
+	authorTitleLink.href = 'https://github.com/hildergill';
+	authorTitleLink.innerHTML = 'hildergill';
+
+	titleBoxElements[0].innerHTML = 'Area Calculator';
+	titleBoxElements[1].innerHTML = 'By ';
+	titleBoxElements[1].appendChild(authorTitleLink);
+
+	menuSectionElement.appendChild(generateCommonBox(titleBoxElements, 'title_box'));
 }
