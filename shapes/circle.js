@@ -8,10 +8,14 @@ class Circle extends Shape {
 	}
 
 	generateInput() {
-		const elements = [
-			'<p>Radius: </p>',
-			'<input type="number" step="0.001" id="radius_input">',
-		];
+		var elements = [document.createElement('p'), document.createElement('input')];
+
+		elements[0].innerHTML = 'Radius: ';
+
+		elements[1].type = 'number';
+		elements[1].id = 'radius_input';
+		elements[1].step = 0.001;
+		
 		return super.generateInput(this.getName(), elements, 1);
 	}
 
@@ -27,12 +31,7 @@ class Circle extends Shape {
 
 	generateOutputBox(inputs) {
 		const inputElements = [`<p>&pi; &times; ${inputs.radius}<sup>2</sup></p>`];
-		return super.generateOutputBox(
-			this.getIcon(),
-			this.getName(),
-			inputElements,
-			this.getArea(inputs)
-		);
+		return super.generateOutputBox(this.getIcon(), this.getName(), inputElements, this.getArea(inputs));
 	}
 
 	clearInputs() {

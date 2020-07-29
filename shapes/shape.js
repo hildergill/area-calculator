@@ -26,6 +26,7 @@ class Shape {
 		buttonContainerElements[1].innerHTML = 'Calculate';
 		buttonContainerElements[1].addEventListener('click', calculateArea);
 
+		inputBoxElements[2].id = 'button_container';
 		for (var i = 0; i < buttonContainerElements.length; i++) inputBoxElements[2].appendChild(buttonContainerElements[i]);
 
 		return inputBoxElements;

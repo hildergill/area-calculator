@@ -8,12 +8,20 @@ class Rectangle extends Shape {
 	}
 
 	generateInput() {
-		const elements = [
-			'<p>Width: </p>',
-			'<input type="number" step="0.001" id="width_input">',
-			'<p>Height: </p>',
-			'<input type="number" step="0.001" id="height_input">',
+		var elements = [
+			document.createElement('p'),
+			document.createElement('input'),
+			document.createElement('p'),
+			document.createElement('input')
 		];
+		
+		elements[0].innerHTML = "Width: ";
+		elements[2].innerHTML = "Height: ";
+
+		elements[1].type = elements[3].type = 'number';
+		elements[1].step = elements[3].step = 0.001;
+		elements[1].id = 'width_input';
+		elements[3].id = 'height_input';
 
 		return super.generateInput(this.getName(), elements, 2);
 	}
@@ -32,12 +40,7 @@ class Rectangle extends Shape {
 	generateOutputBox(inputs) {
 		const inputElements = [`<p>(${inputs.width} &times; ${inputs.height})</p>`];
 
-		return super.generateOutputBox(
-			this.getIcon(),
-			this.getName(),
-			inputElements,
-			this.getArea(inputs)
-		);
+		return super.generateOutputBox(this.getIcon(), this.getName(), inputElements, this.getArea(inputs));
 	}
 
 	clearInputs() {
