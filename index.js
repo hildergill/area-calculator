@@ -30,12 +30,15 @@ function loadInput(index) {
 	var inputSection = document.getElementById('input_section');
 	shapeIndex = index;
 
+	inputSection.innerHTML = null;
+
 	for (var i = 0; i < shapeButtonArray.length; i++) {
 		if (i === index) shapeButtonArray[i].classList.add('active');
 		else shapeButtonArray[i].classList.remove('active');
 	}
 
-	inputSection.innerHTML = shapeArray[shapeIndex].generateInput();
+	var elements = shapeArray[shapeIndex].generateInput();
+	for (var i = 0; i < elements.length; i++) inputSection.appendChild(elements[i]);
 }
 
 // Function to calculate the area of a shape and then create an output box
@@ -109,7 +112,7 @@ function generateClearOutputBox() {
 	clearOutputButton.addEventListener('click', () => {
 		clearOutput();
 	});
-	
+
 	clearOutputButtonBox.appendChild(clearOutputButton);
 }
 

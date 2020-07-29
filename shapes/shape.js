@@ -8,6 +8,7 @@ class Shape {
 	}
 
 	generateInput(title, elementArray, rows = 1) {
+		/*
 		var returnValue = `<p id="input_title">${title}</p>\n\n`;
 		returnValue +=
 			'<div style="display: grid;' +
@@ -25,7 +26,13 @@ class Shape {
 			'<button onclick="clearInputs();">Clear</button>\n' +
 			'<button onclick="calculateArea();">Calculate</button>\n' +
 			'</div>';
+
+		console.log(returnValue);
 		return returnValue;
+		*/
+
+		var inputBoxElements = [document.createElement('p'), document.createElement('div')];
+		return inputBoxElements;
 	}
 
 	getInputs() {
@@ -37,10 +44,7 @@ class Shape {
 	}
 
 	generateOutputBox(icon, title, inputElements, output) {
-		var returnValue =
-			'<div class="common_box">' +
-			`<span id="title_box">\n${icon}` +
-			`\n<p>${title}</p>\n</span>`;
+		var returnValue = '<div class="common_box">' + `<span id="title_box">\n${icon}` + `\n<p>${title}</p>\n</span>`;
 
 		inputElements.map((value) => {
 			returnValue += value;
