@@ -102,4 +102,15 @@ function generateSettingsBox() {
 	menuSectionElement.appendChild(generateCommonBox(settingsBoxElements, 'settings_box'));
 }
 
+function generateClearOutputBox() {
+	var clearOutputButtonBox = document.getElementById('clear_output_button_box'),
+		clearOutputButton = generateIconButton(generateIcon('delete'), 'Clear output', 'clear_output_button');
+
+	clearOutputButton.addEventListener('click', () => {
+		clearOutput();
+	});
+	
+	clearOutputButtonBox.appendChild(clearOutputButton);
+}
+
 // TODO Add documentations later

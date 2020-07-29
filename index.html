@@ -49,7 +49,7 @@
 		<div id="menu_section">
 			<script>
 				generateMenuTitleBox();
-				generateShapeButtonBox(); 
+				generateShapeButtonBox();
 				generateSettingsBox();
 			</script>
 		</div>
@@ -63,14 +63,7 @@
 
 			<div class="common_box" id="clear_output_button_box">
 				<script>
-					var clearOutputButtonBox = document.getElementById('clear_output_button_box');
-
-					clearOutputButtonBox.innerHTML += generateIconButton(
-						generateIcon('delete'),
-						'Clear output',
-						'clear_output_button',
-						'clearOutput()'
-					);
+					generateClearOutputBox();
 				</script>
 			</div>
 		</div>
