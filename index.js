@@ -1,5 +1,5 @@
 // Shape array
-const shapeArray = [new Circle(), new Triangle(), new Rectangle(), new Trapezium()];
+var shapeArray = [new Circle(), new Triangle(), new Rectangle(), new Trapezium()];
 
 // Shape index - stores the current selected shape
 var shapeIndex = 0;
@@ -9,7 +9,7 @@ function loadShapeButtons() {
 	var shapeButtonArray = document.getElementById('shape_buttons_box');
 
 	shapeArray.map((value, index) => {
-		const shapeButton = document.createElement('button'),
+		var shapeButton = document.createElement('button'),
 			shapeButtonText = document.createElement('p');
 
 		shapeButtonText.innerHTML = value.getName();

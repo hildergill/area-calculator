@@ -8,7 +8,7 @@ class Triangle extends Shape {
 	}
 
 	generateInput() {
-		const elements = [
+		var elements = [
 			'<p>Width: </p>',
 			'<input type="number" step="0.001" id="width_input">',
 			'<p>Height: </p>',
@@ -30,7 +30,7 @@ class Triangle extends Shape {
 	}
 
 	generateOutputBox(inputs) {
-		const inputElements = [
+		var inputElements = [
 			'<span class="fraction">',
 			`<p>(${inputs.width} &times; ${inputs.height})</p>`,
 			'<span></span>',

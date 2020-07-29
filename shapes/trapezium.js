@@ -33,7 +33,7 @@ class Trapezium extends Shape {
 	}
 
 	generateOutputBox(inputs) {
-		const inputElements = [
+		var inputElements = [
 			'<span style="display: grid;grid-template-columns: repeat(2, max-content);gap: 0.25rem">',
 			'<span class="fraction">',
 			`<p>(${inputs.a} + ${inputs.b})</p>`,

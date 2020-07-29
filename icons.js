@@ -1,5 +1,5 @@
 // Icons array
-const icons = [
+var icons = [
 	// The "work in progress" icon
 	{
 		name: 'wip',
