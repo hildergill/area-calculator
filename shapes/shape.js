@@ -53,14 +53,14 @@ class Shape {
 		titleBox.id = 'title_box';
 		titleBox.innerHTML = icon;
 		titleBox.appendChild(titleParagraph);
-		outputBox.appendChile(titleBox);
+		outputBox.appendChild(titleBox);
 
 		for (var i = 0; i < inputElements.length; i++) outputBox.appendChild(inputElements[i]);
 
 		outputParagraph.innerHTML = output;
 
-		outputBox.appendChile(outputParagraph);
-		console.log(outputBox);
+		outputBox.appendChild(outputParagraph);
+		return outputBox;
 	}
 
 	clearInputs() {

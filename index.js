@@ -45,7 +45,7 @@ function loadInput(index) {
 function calculateArea() {
 	var outputBox = document.getElementById('output_box');
 	var input = shapeArray[shapeIndex].getInputs();
-	outputBox.innerHTML += shapeArray[shapeIndex].generateOutputBox(input);
+	outputBox.appendChild(shapeArray[shapeIndex].generateOutputBox(input));
 
 	shapeArray[shapeIndex].clearInputs();
 }
