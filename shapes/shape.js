@@ -40,14 +40,26 @@ class Shape {
 	}
 
 	generateOutputBox(icon, title, inputElements, output) {
-		var returnValue = '<div class="common_box">' + `<span id="title_box">\n${icon}` + `\n<p>${title}</p>\n</span>`;
+		var outputBox = document.createElement('div'),
+			titleBox = document.createElement('span'),
+			outputParagraph = document.createElement('p'),
+			titleParagraph = document.createElement('p');
 
-		inputElements.map((value) => {
-			returnValue += value;
-		});
+		outputBox.classList.add('common_box');
 
-		returnValue += `<p>${output}</p>\n</div>`;
-		return returnValue;
+		titleParagraph.innerHTML = title;
+
+		titleBox.id = 'title_box';
+		titleBox.innerHTML = icon;
+		titleBox.appendChild(titleParagraph);
+		outputBox.appendChile(titleBox);
+
+		for (var i = 0; i < inputElements.length; i++) outputBox.appendChild(inputElements[i]);
+
+		outputParagraph.innerHTML = output;
+
+		outputBox.appendChile(outputParagraph);
+		console.log(outputBox);
 	}
 
 	clearInputs() {
