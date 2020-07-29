@@ -10,7 +10,7 @@ class Shape {
 	generateInput(title, elementArray, rows = 1) {
 		var inputBoxElements = [document.createElement('p'), document.createElement('div'), document.createElement('div')];
 
-		inputBoxElements[0].classList.add('input_title');
+		inputBoxElements[0].id = 'input_title';
 		inputBoxElements[0].innerHTML = title;
 
 		inputBoxElements[1].style.display = 'grid';
