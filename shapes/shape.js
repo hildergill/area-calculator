@@ -8,30 +8,26 @@ class Shape {
 	}
 
 	generateInput(title, elementArray, rows = 1) {
-		/*
-		var returnValue = `<p id="input_title">${title}</p>\n\n`;
-		returnValue +=
-			'<div style="display: grid;' +
-			`grid-template-columns: max-content auto;` +
-			`grid-template-rows: repeat(${rows}, auto);\n` +
-			'gap: 0.5rem" />';
+		var inputBoxElements = [document.createElement('p'), document.createElement('div'), document.createElement('div')];
 
-		elementArray.map((value) => {
-			returnValue += value + '\n';
-		});
+		inputBoxElements[0].classList.add('input_title');
+		inputBoxElements[0].innerHTML = title;
 
-		returnValue += '</div>';
-		returnValue +=
-			'<div id="button_container">\n' +
-			'<button onclick="clearInputs();">Clear</button>\n' +
-			'<button onclick="calculateArea();">Calculate</button>\n' +
-			'</div>';
+		inputBoxElements[1].style.display = 'grid';
+		inputBoxElements[1].style.gridTemplateColumns = 'max-content auto';
+		inputBoxElements[1].style.gridTemplateRows = `repeat(${rows}, auto)`;
+		inputBoxElements[1].style.gap = '0.5rem';
+		for (var i = 0; i < elementArray.length; i++) inputBoxElements[1].appendChild(elementArray[i]);
 
-		console.log(returnValue);
-		return returnValue;
-		*/
+		var buttonContainerElements = [document.createElement('button'), document.createElement('button')];
+		buttonContainerElements[0].innerHTML = 'Clear';
+		buttonContainerElements[0].addEventListener('click', clearInputs);
 
-		var inputBoxElements = [document.createElement('p'), document.createElement('div')];
+		buttonContainerElements[1].innerHTML = 'Calculate';
+		buttonContainerElements[1].addEventListener('click', calculateArea);
+
+		for (var i = 0; i < buttonContainerElements.length; i++) inputBoxElements[2].appendChild(buttonContainerElements[i]);
+
 		return inputBoxElements;
 	}
 
