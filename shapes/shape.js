@@ -7,7 +7,7 @@ class Shape {
 		return null;
 	}
 
-	generateInput(title, elementArray, rows = 1) {
+	generateInput(title, elementArray, rows = 1) {		
 		var inputBoxElements = [document.createElement('p'), document.createElement('div'), document.createElement('div')];
 
 		inputBoxElements[0].id = 'input_title';
