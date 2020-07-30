@@ -1,19 +1,29 @@
 // Function to generate a "CommonBox"
 function generateCommonBox(elements, id = null) {
-	var returnValue = id !== null ? `<div class="common_box" id="${id}">` : '<div class="common_box">';
+	var commonBox = document.createElement('div');
+	commonBox.classList.add('common_box');
+	commonBox.id = id;
+
 	elements.map((value) => {
-		returnValue += value + '\n';
+		commonBox.appendChild(value);
 	});
-	returnValue += '</div>';
-	return returnValue;
+
+	return commonBox;
 }
 
 // Function to generate an "IconButton"
-function generateIconButton(icon, text, id = null, action = null) {
-	var returnValue = `<button class="icon_button" id="${id}" onclick="${action}">`;
+function generateIconButton(icon, text, id = null) {
+	var iconButton = document.createElement('button'),
+		iconButtonText = document.createElement('p');
+	
+	iconButton.id = id;
+	iconButton.innerHTML = icon;
+	iconButton.classList.add('icon_button');
 
-	returnValue += `\n${icon}\n<p>${text}</p>\n</button>`;
-	return returnValue;
+	iconButtonText.innerHTML = text;
+	iconButton.appendChild(iconButtonText);
+	
+	return iconButton;
 }
 
 // Function to generate an icon from a given name based on icons.js
