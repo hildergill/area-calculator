@@ -8,17 +8,6 @@ class Trapezium extends Shape {
 	}
 
 	generateInput() {
-		/*
-		var elements = [
-			'<p>Adjacent 1: </p>',
-			'<input type="number" step="0.01" id="a_input">',
-			'<p>Adjacent 2: </p>',
-			'<input type="number" step="0.01" id="b_input">',
-			'<p>Height: </p>',
-			'<input type="number" step="0.01" id="height_input">',
-		];
-		*/
-
 		var elements = [
 			document.createElement('p'),
 			document.createElement('input'),
@@ -54,16 +43,35 @@ class Trapezium extends Shape {
 	}
 
 	generateOutputBox(inputs) {
+		/*
 		var inputElements = [
 			'<span style="display: grid;grid-template-columns: repeat(2, max-content);gap: 0.25rem">',
-			'<span class="fraction">',
-			`<p>(${inputs.a} + ${inputs.b})</p>`,
-			'<span></span>',
-			'<p>2</p>',
-			'</span>',
-			`<p style="margin-top: auto;margin-bottom: auto;"> &times; ${inputs.height}</p>`,
+				'<span class="fraction">',
+					`<p>(${inputs.a} + ${inputs.b})</p>`,
+					'<span></span>',
+					'<p>2</p>',
+				'</span>',
+				`<p style="margin-top: auto;margin-bottom: auto;"> &times; ${inputs.height}</p>`,
 			'</span>',
 		];
+		*/
+
+		var inputElements = [document.createElement('span'), document.createElement('p')],
+			fractionSpan = [document.createElement('span')],
+			fractionSpanElement = [document.createElement('p'), document.createElement('span'), document.createElement('p')];
+
+		fractionSpanElement[0].innerHTML = `${inputs.a} + ${inputs.b}`;
+		fractionSpanElement[2].innerHTML = '2';
+
+		fractionSpan[0].classList.add('fraction');
+		for (var i = 0; i < fractionSpanElement.length; i++) fractionSpan[0].appendChild(fractionSpanElement[i]);
+
+		inputElements[0].style.display = 'grid';
+		inputElements[0].style.gridTemplateColumns = 'repeat(2, max-content)';
+		inputElements[0].style.gap = '0.25rem';
+		for (var i = 0; i < fractionSpan.length; i++) inputElements[0].appendChild(fractionSpan[i]);
+
+		// Set style attributes for inputElements[1]
 
 		return super.generateOutputBox(this.getIcon(), this.getName(), inputElements, this.getArea(inputs));
 	}
