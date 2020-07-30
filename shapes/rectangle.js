@@ -8,13 +8,18 @@ class Rectangle extends Shape {
 	}
 
 	generateInput() {
-		var elements = [document.createElement('p'), document.createElement('input'), document.createElement('p'), document.createElement('input')];
+		var elements = [
+			document.createElement('p'),
+			document.createElement('input'),
+			document.createElement('p'),
+			document.createElement('input')
+		];
 
 		elements[0].innerHTML = 'Width: ';
 		elements[2].innerHTML = 'Height: ';
 
 		elements[1].type = elements[3].type = 'number';
-		elements[1].step = elements[3].step = 0.001;
+		elements[1].step = elements[3].step = 0.01;
 		elements[1].id = 'width_input';
 		elements[3].id = 'height_input';
 
