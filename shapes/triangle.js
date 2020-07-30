@@ -33,16 +33,16 @@ class Triangle extends Shape {
 	}
 
 	generateOutputBox(inputs) {
-		var inputElements = [document.createElement('span')],
+		var outputElements = [document.createElement('span')],
 			fractionElements = [document.createElement('p'), document.createElement('span'), document.createElement('p')];
 
 		fractionElements[0].innerHTML = `${inputs.width} &times; ${inputs.height}`;
 		fractionElements[2].innerHTML = '2';
 
-		inputElements[0].classList.add('fraction');
-		for (var i = 0; i < fractionElements.length; i++) inputElements[0].appendChild(fractionElements[i]);
+		outputElements[0].classList.add('fraction');
+		for (var i = 0; i < fractionElements.length; i++) outputElements[0].appendChild(fractionElements[i]);
 
-		return super.generateOutputBox(this.getIcon(), this.getName(), inputElements, this.getArea(inputs));
+		return super.generateOutputBox(this.getIcon(), this.getName(), outputElements, this.getArea(inputs));
 	}
 
 	clearInputs() {

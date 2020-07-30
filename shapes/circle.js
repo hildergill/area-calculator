@@ -33,9 +33,9 @@ class Circle extends Shape {
 	}
 
 	generateOutputBox(inputs) {
-		var inputElements = [document.createElement('p')];
-		inputElements[0].innerHTML = `&pi; &times; ${inputs.radius}<sup>2</sup>`;
-		return super.generateOutputBox(this.getIcon(), this.getName(), inputElements, this.getArea(inputs));
+		var outputElements = [document.createElement('p')];
+		outputElements[0].innerHTML = `&pi; &times; ${inputs.radius}<sup>2</sup>`;
+		return super.generateOutputBox(this.getIcon(), this.getName(), outputElements, this.getArea(inputs));
 	}
 
 	clearInputs() {

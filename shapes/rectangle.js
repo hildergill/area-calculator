@@ -38,11 +38,11 @@ class Rectangle extends Shape {
 	}
 
 	generateOutputBox(inputs) {
-		var inputElements = [document.createElement('p')];
+		var outputElements = [document.createElement('p')];
 
-		inputElements[0].innerHTML = `${inputs.width} &times; ${inputs.height}`;
+		outputElements[0].innerHTML = `${inputs.width} &times; ${inputs.height}`;
 
-		return super.generateOutputBox(this.getIcon(), this.getName(), inputElements, this.getArea(inputs));
+		return super.generateOutputBox(this.getIcon(), this.getName(), outputElements, this.getArea(inputs));
 	}
 
 	clearInputs() {

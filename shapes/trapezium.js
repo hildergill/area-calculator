@@ -43,7 +43,7 @@ class Trapezium extends Shape {
 	}
 
 	generateOutputBox(inputs) {
-		var inputElements = [document.createElement('span')],
+		var outputElements = [document.createElement('span')],
 			fractionSpan = [document.createElement('span'), document.createElement('p')],
 			fractionSpanElement = [document.createElement('p'), document.createElement('span'), document.createElement('p')];
 
@@ -55,12 +55,12 @@ class Trapezium extends Shape {
 		fractionSpan[1].innerHTML = ` &times; ${inputs.height}`;
 		for (var i = 0; i < fractionSpanElement.length; i++) fractionSpan[0].appendChild(fractionSpanElement[i]);
 
-		inputElements[0].style.display = 'grid';
-		inputElements[0].style.gridTemplateColumns = 'repeat(2, max-content)';
-		inputElements[0].style.gap = '0.25rem';
-		for (var i = 0; i < fractionSpan.length; i++) inputElements[0].appendChild(fractionSpan[i]);
+		outputElements[0].style.display = 'grid';
+		outputElements[0].style.gridTemplateColumns = 'repeat(2, max-content)';
+		outputElements[0].style.gap = '0.25rem';
+		for (var i = 0; i < fractionSpan.length; i++) outputElements[0].appendChild(fractionSpan[i]);
 
-		return super.generateOutputBox(this.getIcon(), this.getName(), inputElements, this.getArea(inputs));
+		return super.generateOutputBox(this.getIcon(), this.getName(), outputElements, this.getArea(inputs));
 	}
 
 	clearInputs() {

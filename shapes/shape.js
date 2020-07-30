@@ -40,7 +40,7 @@ class Shape {
 		return null;
 	}
 
-	generateOutputBox(icon, title, inputElements, output) {
+	generateOutputBox(icon, title, outputElements, output) {
 		var outputBox = document.createElement('div'),
 			titleBox = document.createElement('span'),
 			outputParagraph = document.createElement('p'),
@@ -55,7 +55,7 @@ class Shape {
 		titleBox.appendChild(titleParagraph);
 		outputBox.appendChild(titleBox);
 
-		for (var i = 0; i < inputElements.length; i++) outputBox.appendChild(inputElements[i]);
+		for (var i = 0; i < outputElements.length; i++) outputBox.appendChild(outputElements[i]);
 
 		outputParagraph.innerHTML = output;
 
