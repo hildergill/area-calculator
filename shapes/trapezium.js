@@ -8,6 +8,7 @@ class Trapezium extends Shape {
 	}
 
 	generateInput() {
+		/*
 		var elements = [
 			'<p>Adjacent 1: </p>',
 			'<input type="number" step="0.01" id="a_input">',
@@ -16,6 +17,26 @@ class Trapezium extends Shape {
 			'<p>Height: </p>',
 			'<input type="number" step="0.01" id="height_input">',
 		];
+		*/
+
+		var elements = [
+			document.createElement('p'),
+			document.createElement('input'),
+			document.createElement('p'),
+			document.createElement('input'),
+			document.createElement('p'),
+			document.createElement('input'),
+		];
+
+		elements[0].innerHTML = 'Adjacent 1: ';
+		elements[2].innerHTML = 'Adjacent 2: ';
+		elements[3].innerHTML = 'Height: ';
+
+		elements[1].type = elements[3].type = elements[5].type = 'number';
+		elements[1].step = elements[3].step = elements[5].step = 0.01;
+		elements[1].id = 'a_input';
+		elements[3].id = 'b_input';
+		elements[5].id = 'height_input';
 
 		return super.generateInput(this.getName(), elements, 3);
 	}
@@ -44,12 +65,7 @@ class Trapezium extends Shape {
 			'</span>',
 		];
 
-		return super.generateOutputBox(
-			this.getIcon(),
-			this.getName(),
-			inputElements,
-			this.getArea(inputs)
-		);
+		return super.generateOutputBox(this.getIcon(), this.getName(), inputElements, this.getArea(inputs));
 	}
 
 	clearInputs() {
