@@ -1,0 +1,18 @@
+/* ============================================================ */
+/* This file contains the general rules for licenses.html       */
+/* ============================================================ */
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Noto Sans';
+}
+
+body {
+	background-color: var(--color-light-background);
+	width: 800px;
+	margin: auto;
+	display: grid;
+	gap: 1rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
