@@ -7,28 +7,62 @@
 
 		<!-- Import stylesheet -->
 		<link rel="stylesheet" href="./stylesheets/common.css" />
+		<link rel="stylesheet" href="./stylesheets/icon-button.css" />
+		<link rel="stylesheet" href="./stylesheets/licenses.css" />
 		<link rel="stylesheet" href="./stylesheets/common-box.css" />
+
+		<!-- Import scripts -->
+		<script src="./generators.js"></script>
+		<script src="./icons.js"></script>
+
+		<!-- Import favicons -->
+		<link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png" />
+		<link rel="icon" type="image/png" sizes="192x192" href="./favicon/android-icon-192x192.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png" />
+		<link rel="manifest" href="/manifest.json" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+		<meta name="theme-color" content="#ffffff" />
 	</head>
 
 	<body>
-		<div>
+		<div class="common_box">
 			<h1>Open Source Licenses</h1>
 		</div>
 
-		<div>
+		<div class="common_box_white">
 			<a href="https://github.com/hildergill/area-calculator/blob/master/LICENSE">Area Calculator</a>
 		</div>
 
-		<div>
+		<div class="common_box_white">
 			<a href="https://github.com/googlefonts/noto-fonts/blob/master/LICENSE">Noto Sans</a>
 		</div>
 
-		<div>
+		<div class="common_box_white">
 			<a href="https://github.com/google/material-design-icons/blob/master/LICENSE">Google Icons</a>
 		</div>
 
-		<div>
-			<button onclick="window.location = './';">Go back</button>
+		<div class="common_box" id="back_button_container">
+			<script>
+				var backButton = generateIconButton(generateIcon('back-button'), 'Go Back'),
+					backButtonContainer = document.getElementById('back_button_container');
+
+				backButton.addEventListener('click', () => {
+					window.location = './';
+				});
+
+				backButtonContainer.appendChild(backButton);
+			</script>
 		</div>
 	</body>
 </html>
