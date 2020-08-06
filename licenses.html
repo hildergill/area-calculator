@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="./stylesheets/common-box.css" />
 		<link rel="stylesheet" href="./stylesheets/common.css" />
 		<link rel="stylesheet" href="./stylesheets/open-source-licenses.css" />
+		<link rel="stylesheet" href="./stylesheets/icon-button.css" />
 
 		<link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png" />
 		<link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png" />
@@ -26,6 +27,9 @@
 		<meta name="msapplication-TileColor" content="#ffffff" />
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
 		<meta name="theme-color" content="#ffffff" />
+
+		<script src="./generators.js"></script>
+		<script src="./icons.js"></script>
 	</head>
 
 	<body>
@@ -45,8 +49,16 @@
 			<a href="https://github.com/google/material-design-icons/blob/master/LICENSE">Google Icons</a>
 		</div>
 
-		<div class="common_box">
-			<button onclick="window.location = './';">Go back</button>
+		<div id="back_button_container" class="common_box">
+			<script>
+				var backButton = generateIconButton(generateIcon('back_arrow'), 'Go Back');
+				backButton.addEventListener('click', () => {
+					window.location = './';
+				});
+
+				var backButtonContainer = document.getElementById('back_button_container');
+				backButtonContainer.appendChild(backButton);
+			</script>
 		</div>
 	</body>
 </html>
