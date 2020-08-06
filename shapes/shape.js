@@ -7,25 +7,29 @@ class Shape {
 		return null;
 	}
 
-	generateInput(title, elementArray, rows = 1) {
-		var returnValue = `<p id="input_title">${title}</p>\n\n`;
-		returnValue +=
-			'<div style="display: grid;' +
-			`grid-template-columns: max-content auto;` +
-			`grid-template-rows: repeat(${rows}, auto);\n` +
-			'gap: 0.5rem" />';
+	generateInput(title, elementArray, rows = 1) {		
+		var inputBoxElements = [document.createElement('p'), document.createElement('div'), document.createElement('div')];
 
-		elementArray.map((value) => {
-			returnValue += value + '\n';
-		});
+		inputBoxElements[0].id = 'input_title';
+		inputBoxElements[0].innerHTML = title;
 
-		returnValue += '</div>';
-		returnValue +=
-			'<div id="button_container">\n' +
-			'<button onclick="clearInputs();">Clear</button>\n' +
-			'<button onclick="calculateArea();">Calculate</button>\n' +
-			'</div>';
-		return returnValue;
+		inputBoxElements[1].style.display = 'grid';
+		inputBoxElements[1].style.gridTemplateColumns = 'max-content auto';
+		inputBoxElements[1].style.gridTemplateRows = `repeat(${rows}, auto)`;
+		inputBoxElements[1].style.gap = '0.5rem';
+		for (var i = 0; i < elementArray.length; i++) inputBoxElements[1].appendChild(elementArray[i]);
+
+		var buttonContainerElements = [document.createElement('button'), document.createElement('button')];
+		buttonContainerElements[0].innerHTML = 'Clear';
+		buttonContainerElements[0].addEventListener('click', clearInputs);
+
+		buttonContainerElements[1].innerHTML = 'Calculate';
+		buttonContainerElements[1].addEventListener('click', calculateArea);
+
+		inputBoxElements[2].id = 'button_container';
+		for (var i = 0; i < buttonContainerElements.length; i++) inputBoxElements[2].appendChild(buttonContainerElements[i]);
+
+		return inputBoxElements;
 	}
 
 	getInputs() {
@@ -36,18 +40,27 @@ class Shape {
 		return null;
 	}
 
-	generateOutputBox(icon, title, inputElements, output) {
-		var returnValue =
-			'<div class="common_box">' +
-			`<span id="title_box">\n${icon}` +
-			`\n<p>${title}</p>\n</span>`;
+	generateOutputBox(icon, title, outputElements, output) {
+		var outputBox = document.createElement('div'),
+			titleBox = document.createElement('span'),
+			outputParagraph = document.createElement('p'),
+			titleParagraph = document.createElement('p');
 
-		inputElements.map((value) => {
-			returnValue += value;
-		});
+		outputBox.classList.add('common_box');
 
-		returnValue += `<p>${output}</p>\n</div>`;
-		return returnValue;
+		titleParagraph.innerHTML = title;
+
+		titleBox.id = 'title_box';
+		titleBox.innerHTML = icon;
+		titleBox.appendChild(titleParagraph);
+		outputBox.appendChild(titleBox);
+
+		for (var i = 0; i < outputElements.length; i++) outputBox.appendChild(outputElements[i]);
+
+		outputParagraph.innerHTML = output;
+
+		outputBox.appendChild(outputParagraph);
+		return outputBox;
 	}
 
 	clearInputs() {

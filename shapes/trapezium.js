@@ -9,13 +9,23 @@ class Trapezium extends Shape {
 
 	generateInput() {
 		var elements = [
-			'<p>Adjacent 1: </p>',
-			'<input type="number" step="0.01" id="a_input">',
-			'<p>Adjacent 2: </p>',
-			'<input type="number" step="0.01" id="b_input">',
-			'<p>Height: </p>',
-			'<input type="number" step="0.01" id="height_input">',
+			document.createElement('p'),
+			document.createElement('input'),
+			document.createElement('p'),
+			document.createElement('input'),
+			document.createElement('p'),
+			document.createElement('input'),
 		];
+
+		elements[0].innerHTML = 'Adjacent 1: ';
+		elements[2].innerHTML = 'Adjacent 2: ';
+		elements[4].innerHTML = 'Height: ';
+
+		elements[1].type = elements[3].type = elements[5].type = 'number';
+		elements[1].step = elements[3].step = elements[5].step = 0.01;
+		elements[1].id = 'a_input';
+		elements[3].id = 'b_input';
+		elements[5].id = 'height_input';
 
 		return super.generateInput(this.getName(), elements, 3);
 	}
@@ -33,23 +43,24 @@ class Trapezium extends Shape {
 	}
 
 	generateOutputBox(inputs) {
-		const inputElements = [
-			'<span style="display: grid;grid-template-columns: repeat(2, max-content);gap: 0.25rem">',
-			'<span class="fraction">',
-			`<p>(${inputs.a} + ${inputs.b})</p>`,
-			'<span></span>',
-			'<p>2</p>',
-			'</span>',
-			`<p style="margin-top: auto;margin-bottom: auto;"> &times; ${inputs.height}</p>`,
-			'</span>',
-		];
+		var outputElements = [document.createElement('span')],
+			fractionSpan = [document.createElement('span'), document.createElement('p')],
+			fractionSpanElement = [document.createElement('p'), document.createElement('span'), document.createElement('p')];
 
-		return super.generateOutputBox(
-			this.getIcon(),
-			this.getName(),
-			inputElements,
-			this.getArea(inputs)
-		);
+		fractionSpanElement[0].innerHTML = `${inputs.a} + ${inputs.b}`;
+		fractionSpanElement[2].innerHTML = '2';
+
+		fractionSpan[0].classList.add('fraction');
+		fractionSpan[1].style.marginTop = fractionSpan[1].style.marginBottom = 'auto';
+		fractionSpan[1].innerHTML = ` &times; ${inputs.height}`;
+		for (var i = 0; i < fractionSpanElement.length; i++) fractionSpan[0].appendChild(fractionSpanElement[i]);
+
+		outputElements[0].style.display = 'grid';
+		outputElements[0].style.gridTemplateColumns = 'repeat(2, max-content)';
+		outputElements[0].style.gap = '0.25rem';
+		for (var i = 0; i < fractionSpan.length; i++) outputElements[0].appendChild(fractionSpan[i]);
+
+		return super.generateOutputBox(this.getIcon(), this.getName(), outputElements, this.getArea(inputs));
 	}
 
 	clearInputs() {

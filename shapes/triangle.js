@@ -8,12 +8,15 @@ class Triangle extends Shape {
 	}
 
 	generateInput() {
-		const elements = [
-			'<p>Width: </p>',
-			'<input type="number" step="0.001" id="width_input">',
-			'<p>Height: </p>',
-			'<input type="number" step="0.001" id="height_input">',
-		];
+		var elements = [document.createElement('p'), document.createElement('input'), document.createElement('p'), document.createElement('input')];
+
+		elements[1].type = elements[3].type = 'number';
+		elements[1].step = elements[3].step = 0.01;
+		elements[1].id = 'width_input';
+		elements[3].id = 'height_input';
+
+		elements[0].innerHTML = 'Width: ';
+		elements[2].innerHTML = 'Height: ';
 
 		return super.generateInput(this.getName(), elements, 2);
 	}
@@ -30,20 +33,16 @@ class Triangle extends Shape {
 	}
 
 	generateOutputBox(inputs) {
-		const inputElements = [
-			'<span class="fraction">',
-			`<p>(${inputs.width} &times; ${inputs.height})</p>`,
-			'<span></span>',
-			'<p>2</p>',
-			'</span>',
-		];
+		var outputElements = [document.createElement('span')],
+			fractionElements = [document.createElement('p'), document.createElement('span'), document.createElement('p')];
 
-		return super.generateOutputBox(
-			this.getIcon(),
-			this.getName(),
-			inputElements,
-			this.getArea(inputs)
-		);
+		fractionElements[0].innerHTML = `${inputs.width} &times; ${inputs.height}`;
+		fractionElements[2].innerHTML = '2';
+
+		outputElements[0].classList.add('fraction');
+		for (var i = 0; i < fractionElements.length; i++) outputElements[0].appendChild(fractionElements[i]);
+
+		return super.generateOutputBox(this.getIcon(), this.getName(), outputElements, this.getArea(inputs));
 	}
 
 	clearInputs() {
